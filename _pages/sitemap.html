@@ -1,0 +1,42 @@
+---
+title: Sitemap
+sitemap: false
+---
+
+
+<h3>Pages</h3>
+{% assign items = site.pages | sort: 'title' %}
+{% for page in items %}
+  {% assign count = page.permalink.size | plus: 0 %}
+  {% if page.slug == "index" %}
+    {% assign permalink = "/" %}
+  {% elsif page.permalink contains ":path" or page.permalink contains ":slug" %}
+    {% capture permalink %}/{{ page.slug }}/{% endcapture %}
+  {% elsif count > 1 %}
+    {% assign permalink = page.permalink %}
+  {% else %}
+    {% capture permalink %}/{{ page.slug }}/{% endcapture %}
+  {% endif %}
+  <h6>{{ page.title }} <br /><small>{{ permalink }}</small></h6>
+  <a class="btn" target="_blank" href="{{ site.url }}{{ permalink }}">New</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-critical" target="_blank" href="http://www.teachingdegree.org{{ permalink }}">Old/Live</a>
+  <br />
+{% endfor %}
+
+
+<h3>Posts</h3>
+{% assign items = site.posts | sort: 'title' %}
+{% for page in items %}
+  {% assign count = page.permalink.size | plus: 0 %}
+  {% if page.slug == "index" %}
+    {% assign permalink = "/" %}
+  {% elsif page.permalink contains ":path" or page.permalink contains ":slug" %}
+    {% capture permalink %}/{{ page.slug }}/{% endcapture %}
+  {% elsif count > 1 %}
+    {% assign permalink = page.permalink %}
+  {% else %}
+    {% capture permalink %}/{{ page.slug }}{% endcapture %}
+  {% endif %}
+  <h6>{{ page.title }} <br /><small>{{ permalink }}</small></h6>
+  <a class="btn" target="_blank" href="{{ site.url }}{{ permalink }}">New</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-critical" target="_blank" href="http://www.teachingdegree.org{{ permalink }}">Old/Live</a>
+  <br />
+{% endfor %}
