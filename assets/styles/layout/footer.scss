@@ -1,7 +1,7 @@
 .site-footer {
   @include font-smooth;
 
-  background-color: $color-gray-light;
+  background-color: $color-navy-dark;
   border-top: $base-border;
   display: block;
   font-size: 14px;
@@ -24,7 +24,7 @@
 
 // Footer Logo
 .logo-footer {
-  color: $color-navy;
+  color: rgba($color-white, .5);
 
   svg {
     display: block;
@@ -36,7 +36,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $color-red;
+    color: $color-white;
   }
 
   @media (min-width: $desk-start) {
@@ -63,13 +63,13 @@
     &:hover,
     &:focus {
       a {
-        color: $color-red;
+        color: $color-white;
       }
     }
   }
 
   a {
-    color: $color-navy;
+    color: rgba($color-white, .5);
   }
 
   // Laptop+ ⬇

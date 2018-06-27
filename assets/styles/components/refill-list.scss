@@ -49,6 +49,12 @@
     padding: 10px;
     text-transform: uppercase;
     width: 50%;
+
+    &:disabled {
+      background-color: $color-teal;
+      color: rgba($color-white, .5);
+      opacity: 1;
+    }
   }
 
   button:first-of-type {

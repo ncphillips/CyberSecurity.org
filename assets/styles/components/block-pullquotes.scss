@@ -1,5 +1,5 @@
 .pullquote {
-  color: $color-red;
+  color: $color-yellow;
   float: none;
   font-size: 18px;
   font-style: 400;
@@ -29,12 +29,11 @@
   }
 
   a {
-    color: $color-red;
+    color: $color-yellow-dark;
     text-decoration: underline;
   }
 
   cite {
-    display: block;
     font-size: 14px;
     font-style: normal;
     margin: 5px 0 0;

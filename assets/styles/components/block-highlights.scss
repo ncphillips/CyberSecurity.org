@@ -10,7 +10,7 @@
   }
 
   .title {
-    background-color: $color-teal;
+    background-color: $color-yellow;
     border-radius: $base-border-radius;
     color: $color-white;
 
@@ -23,7 +23,7 @@
       padding-left: 80px;
 
       &::before {
-        background: $color-teal-dark;
+        background: $color-yellow-dark;
         border-radius: $base-border-radius;
         bottom: 0;
         content: counter(highlights-counter);
@@ -57,7 +57,7 @@
 
     .minus,
     .plus {
-      fill: $color-teal;
+      fill: $color-yellow;
     }
   }
 }

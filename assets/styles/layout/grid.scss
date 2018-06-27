@@ -32,7 +32,7 @@ body {
   // Laptop+ ⬇
   @media (min-width: $lap-start) {
     background-position: center 140px;
-    border-top: 5px solid $color-red;
+    border-top: 5px solid $color-blue;
 
     &.has-sub {
       background-position: center 160px;

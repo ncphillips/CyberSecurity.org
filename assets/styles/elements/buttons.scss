@@ -22,7 +22,7 @@ button,
   &:active,
   &:hover,
   &:focus {
-    background-color: $color-blue-light;
+    background-color: $color-blue-dark;
     color: $color-white;
   }
 
@@ -50,13 +50,13 @@ button,
 
 // Critical Button
 .btn-critical {
-  background-color: $color-red;
-  box-shadow: 0 3px 0 0 $color-red-dark;
+  background-color: $color-orange;
+  box-shadow: 0 3px 0 0 $color-orange-dark;
 
   &:active,
   &:hover,
   &:focus {
-    background-color: $color-red-light;
+    background-color: $color-orange-dark;
   }
 }
 
@@ -85,7 +85,7 @@ button,
   &:active,
   &:hover,
   &:focus {
-    border-color: $color-red;
+    border-color: $action-focus-color;
 
     &::after {
       border-color: currentColor;
@@ -97,7 +97,7 @@ button,
 .btn-link {
   @include font-smooth;
 
-  background-color: $color-blue-light;
+  background-color: $color-teal-light;
   border-bottom-left-radius: $base-border-radius;
   border-bottom-right-radius: $base-border-radius;
   border-top: $base-border;
@@ -113,8 +113,8 @@ button,
   &:hover,
   &:active,
   &:focus {
-    background-color: $color-white;
-    color: $color-blue;
+    background-color: $color-blue;
+    color: $color-white;
   }
 
   @media (min-width: $lap-start) {
