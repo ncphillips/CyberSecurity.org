@@ -71,4 +71,3 @@ fields:
   name: show_widget
   label: Show Widget
   description: Widget for "sidebar" layout.
-pages:
