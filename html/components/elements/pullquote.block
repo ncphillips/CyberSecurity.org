@@ -17,10 +17,10 @@ Properties: <ul><li>content <i>required.</i></li><li>source</li><li>url</li><li>
 
   <blockquote class="pullquote{{ class }}">
 
-    <p>{{ content }}</p>
+    <p>
+      {{ content }}
 
-    {% if source %}
-      <footer>
+      {% if source %}
         <cite>
           {% if url %}
             <a href="{{ url }}" target="_blank">{{ source }}</a>
@@ -28,8 +28,8 @@ Properties: <ul><li>content <i>required.</i></li><li>source</li><li>url</li><li>
             {{ source }}
           {% endif %}
         </cite>
-      </footer>
-    {% endif %}
+      {% endif %}
+    </p>
 
   </blockquote>
 

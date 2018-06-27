@@ -85,10 +85,10 @@ button,
   &:active,
   &:hover,
   &:focus {
-    border-color: $action-focus-color;
+    color: $action-focus-color;
 
     &::after {
-      border-color: currentColor;
+      border-color: $action-focus-color;
     }
   }
 }
