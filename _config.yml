@@ -56,8 +56,8 @@ webmaster:
 algolia:
   api_id:            QT4LTISCL1
   api_key:           9169c7a55535b7c9c9660f115b9d7db1
-  rankings:          bacom_rankings
-  rankings_items:    bacom_rankings_items
+  rankings:          bacom_rankings # used as example, will remove on deployment
+  rankings_items:    bacom_rankings_items # used as example, will remove on deployment
   scholarships:      he_scholarships_v2.0
   ipeds:             he_ipeds
 
