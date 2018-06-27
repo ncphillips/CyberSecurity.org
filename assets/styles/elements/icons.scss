@@ -1,0 +1,72 @@
+// Icons
+.icon {
+  svg {
+    display: inline-block;
+    height: 25px;
+    vertical-align: middle;
+    width: 25px;
+  }
+
+  &:not(.reserve-colors) {
+    g,
+    path,
+    circle {
+      fill: currentColor;
+    }
+  }
+}
+
+
+// Icon Plus/Minus
+.icon-plus-minus {
+  height: 29px;
+  overflow: visible !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 29px;
+
+  .circle {
+    fill: $color-blue;
+  }
+
+  .minus,
+  .plus {
+    fill: $color-white;
+  }
+
+  .plus {
+    .is-active & {
+      display: none;
+    }
+  }
+
+  .minus {
+    display: none;
+
+    .is-active & {
+      display: block;
+    }
+  }
+}
+
+// Icons - Social
+$social-list: facebook twitter google linkedin;
+@each $social-item in $social-list {
+  .icon-#{$social-item} {
+    background: transparent url('/assets/img/icon-#{$social-item}-2x.png') no-repeat center;
+  }
+}
+
+// Icon - Arrow Down
+.icon-arrow-down {
+  @include size(6px);
+
+  border: 2px solid;
+  border-bottom: 0;
+  border-color: $color-gray;
+  border-left: 0;
+  border-radius: 0;
+  display: inline-block;
+  transform: rotate(135deg);
+}

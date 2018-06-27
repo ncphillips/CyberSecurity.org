@@ -1,0 +1,17 @@
+.badge {
+  margin: $base-spacing 0;
+  max-width: 300px;
+  text-align: center;
+  width: 100%;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .btn {
+    display: block;
+    margin: $small-spacing auto 0;
+    width: 220px;
+  }
+}

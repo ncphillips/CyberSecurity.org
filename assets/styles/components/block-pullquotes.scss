@@ -1,0 +1,74 @@
+.pullquote {
+  color: $color-red;
+  float: none;
+  font-size: 18px;
+  font-style: 400;
+  line-height: (25 / 18);
+  margin: $base-spacing auto;
+  text-indent: 0;
+  text-transform: uppercase;
+
+  @media (min-width: $lap-start) {
+    font-size: 20px;
+    line-height: (32 / 20);
+  }
+
+  p {
+    font-size: inherit;
+    font-style: inherit;
+    margin: 0 0 $small-spacing;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $color-red;
+    text-decoration: underline;
+  }
+
+  cite {
+    display: block;
+    font-size: 14px;
+    font-style: normal;
+    margin: 5px 0 0;
+
+    &::before {
+      content: '~';
+      display: inline-block;
+      margin-right: 3px;
+    }
+  }
+
+  &.fl-left {
+    @media (min-width: $lap-start) {
+      clear: left;
+      float: left;
+      margin: 0 40px $small-spacing 0;
+      max-width: 400px;
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  &.fl-center {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  &.fl-right {
+    @media (min-width: $lap-start) {
+      clear: right;
+      float: right;
+      margin: 0 0 $small-spacing 40px;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}

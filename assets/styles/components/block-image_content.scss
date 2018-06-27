@@ -1,0 +1,35 @@
+.image-content {
+  margin: $base-spacing 0;
+
+  .image {
+    display: block;
+    margin: 0 0 $base-spacing;
+    width: 100%;
+
+    @media (max-width: $lap-start) {
+      + h1,
+      + h2,
+      + h3,
+      + h4,
+      + h5,
+      + h6,
+      + strong {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  @media (min-width: $lap-start) {
+    min-height: 250px;
+    padding-left: 275px;
+    position: relative;
+
+    .image {
+      margin: 0;
+      max-width: 250px;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}

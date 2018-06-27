@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="32px" viewBox="0 0 28 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Paper</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Modules---Desktop" transform="translate(-460.000000, -28028.000000)" fill="#FFFFFF">
+            <g id="Group-12" transform="translate(460.000000, 28027.000000)">
+                <g id="Group-9">
+                    <g id="Group-7">
+                        <path d="M6,27 L22,27 L22,25 L6,25 L6,27 Z M6,23 L22,23 L22,21 L6,21 L6,23 Z M6,19 L22,19 L22,17 L6,17 L6,19 Z M24,29 L4,29 L4,5 L16,5 L16,13 L24,13 L24,29 Z M18,5 C18.0718376,5.02602359 18.1447163,5.05412908 18.2196773,5.08535739 C18.8068714,5.32893824 19.2149922,5.611034 19.3461739,5.74219292 L23.2576783,9.65301874 C23.38886,9.78417765 23.6710047,10.1911867 23.9146278,10.7793199 C23.9458615,10.8542679 23.9739719,10.9281749 24,10.9989591 L18,11 L18,5 Z M25.879,6.879 L22.122,3.122 C20.955,1.955 18.65,1 17,1 L3,1 C1.35,1 0,2.35 0,4 L0,30 C0,31.65 1.35,33 3,33 L25,33 C26.65,33 28,31.65 28,30 L28,12 C28,10.35 27.045,8.045 25.879,6.879 L25.879,6.879 Z" id="Page-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+@mixin font-face($file, $name, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('../fonts/#{$file}.woff2') format('woff2'),
+         url('../fonts/#{$file}.woff') format('woff'),
+         url('../fonts/#{$file}.ttf') format('truetype');
+  }
+}
+
+/*
+e.g.
+$fonts: (
+  montserrat-v11-latin-regular 'Montserrat',
+  montserrat-v11-latin-italic 'Montserrat' 400 italic,
+  montserrat-v11-latin-300 'Montserrat' 300,
+  montserrat-v11-latin-300italic 'Montserrat' 300 italic,
+  montserrat-v11-latin-700 'Montserrat' 700,
+  montserrat-v11-latin-700italic 'Montserrat' 700 italic,
+);
+*/
+
+$fonts: ();
+
+@each $font in $fonts {
+  @include font-face($font...);
+}

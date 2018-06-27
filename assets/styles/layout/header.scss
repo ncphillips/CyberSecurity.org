@@ -1,0 +1,346 @@
+// Sub Navigation Active
+.is-active-mobile {
+  height: 100%;
+  overflow: hidden;
+}
+
+// Site Header
+.site-header {
+  height: $header-height-mobile;
+  left: 0;
+  position: relative;
+  transition: height .3s linear, transform .2s ease-out;
+  width: 100%;
+  z-index: 3;
+
+  .is-active-mobile & {
+    transform: translateX(-100%) translateX($header-height-mobile);
+
+    .menu {
+      box-shadow: -5px 0 10px 0 rgba($color-black, .3);
+    }
+  }
+
+  // Laptop+ ⬇
+  @media (min-width: $lap-start) {
+    height: $header-height;
+
+    .is-active-mobile & {
+      transform: translateX(-$mobile-width);
+    }
+  }
+
+  // Desktop+ ⬇
+  @media (min-width: $desk-start) {
+    .is-active-mobile & {
+      transform: none;
+
+      .menu {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// Header Logo
+.header-logo {
+  left: $body-gutter;
+  max-width: 190px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  svg {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  // Laptop+ ⬇
+  @media (min-width: $lap-start) {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  // Desk+ ⬇
+  @media (min-width: $desk-start) {
+    max-width: 250px;
+    margin-top: -3px;
+  }
+
+  // Wall+ ⬇
+  @media (min-width: $wall-start) {
+    max-width: 315px;
+    margin-top: -1px;
+  }
+}
+
+// Primary Navigation
+.nav-primary {
+  font-size: 15px;
+  height: $header-height-mobile;
+
+  .menu {
+    background-color: $color-red;
+    bottom: 0;
+    color: $color-white;
+    display: block;
+    height: 100vh;
+    left: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    transition: left .3s linear;
+    width: calc(100% - #{$header-height-mobile});
+    z-index: 0;
+
+    > li {
+      border-bottom: 1px solid $color-red-dark;
+      display: block;
+      margin-left: 0;
+      position: relative;
+
+      // Mobile Only
+      @media (max-width: $desk-start - 1px) {
+        &.is-active .sub-menu {
+          display: block;
+
+          li {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .has-children > a::after {
+    border-radius: 0;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    content: '';
+    display: block;
+    height: 5px;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    right: $small-spacing;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+    width: 5px;
+  }
+
+  a {
+    color: currentColor;
+    display: block;
+    font-weight: 500;
+    line-height: 1;
+    padding: $small-spacing;
+    position: relative;
+  }
+
+  .btn-bars {
+    border-radius: 0;
+    color: $color-navy;
+    display: block;
+    position: absolute;
+    right: $body-gutter;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // Laptop+ ⬇
+  @media (min-width: $lap-start) {
+    height: $header-height;
+
+    .menu {
+      width: $mobile-width;
+
+       > li {
+        display: block;
+      }
+    }
+  }
+
+  // Desktop+ ⬇
+  @media (min-width: $desk-start) {
+    height: auto;
+    position: absolute;
+    right: $small-spacing;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    .menu {
+      background-color: transparent;
+      bottom: auto;
+      color: $color-navy;
+      height: auto;
+      left: auto;
+      min-height: auto;
+      overflow: visible;
+      position: relative;
+      right: auto;
+      text-align: right;
+      top: auto;
+      transition: none;
+      width: inherit;
+
+      > li {
+        border: 0;
+        display: inline-block;
+        margin-left: 15px;
+        position: relative;
+
+        &::after {
+          background-color: transparent;
+          content: '';
+          display: block;
+          height: 1px;
+          opacity: 0;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+        }
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $color-white;
+          border-radius: $base-border-radius;
+          box-shadow: $base-box-shadow;
+
+          &.has-children {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+             > a::after {
+              border-color: $color-red;
+            }
+          }
+
+           > a {
+            color: $color-red;
+          }
+
+          .sub-menu {
+            display: block;
+          }
+        }
+
+        &:last-of-type .sub-menu {
+          border-top-right-radius: 0;
+          left: inherit;
+          right: 0;
+          transform: none;
+        }
+      }
+    }
+
+    .has-children > a::after {
+      display: inline-block;
+      margin-left: 10px;
+      position: relative;
+      right: auto;
+      top: auto;
+    }
+
+    .sub-menu li {
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none;
+
+         > a {
+          color: $color-red;
+        }
+      }
+
+      &.parent {
+        display: none;
+      }
+    }
+
+    .btn-bars {
+      display: none;
+    }
+
+    a {
+      padding: 20px 15px;
+    }
+  }
+
+  // Wall+ ⬇
+  @media (min-width: $wall-start) {
+    .menu > li {
+      margin-left: 35px;
+    }
+  }
+}
+
+// Primary Navigation Dropdown
+.sub-menu {
+  display: none;
+  font-size: 14px;
+  width: 100%;
+
+  li {
+    border-top: 1px solid $color-red;
+    display: block;
+    margin: 0;
+    text-align: left;
+  }
+
+  a {
+    background-color: $color-red-dark;
+    display: block;
+    text-transform: none;
+  }
+
+  // Desktop+ ⬇
+  @media (min-width: $desk-start) {
+    background: $color-white;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow;
+    left: 50%;
+    position: absolute;
+    top: calc(100% + 1px);
+    transform: translateX(-50%);
+    width: $dropdown-width;
+    z-index: 5;
+
+    li {
+      border-bottom: $base-border;
+      border-top: 0;
+      margin: 0;
+      text-align: right;
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      &.parent-landing {
+        display: none;
+      }
+    }
+
+    a {
+      background-color: transparent;
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 20px $small-spacing 17px;
+      text-align: center;
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+}

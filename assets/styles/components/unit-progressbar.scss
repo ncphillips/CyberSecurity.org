@@ -1,0 +1,56 @@
+.progress {
+  align-items: center;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+
+  // Laptop ⬇
+  @media (min-width: $lap-start) {
+    .has-sub & {
+      float: right;
+      height: $subnav-height;
+      padding: 0 0 0 $small-spacing;
+      width: 50%;
+    }
+  }
+
+  // Desk ⬇
+  @media (min-width: $desk-start) {
+    .has-sub & {
+      width: 66.6666%;
+    }
+  }
+}
+
+.progress-bar {
+  appearance: none;
+  background: transparent url('/assets/img/icon-dot.png') repeat-x left center;
+  background-size: 13px 6px;
+  border: 0;
+  border-radius: 3px;
+  color: $color-white;
+  cursor: pointer;
+  height: 6px;
+  width: 100%;
+
+  &::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background-color: transparent;
+    background-image: url('/assets/img/icon-dot-active.png');
+    background-size: 13px 6px;
+  }
+
+  &::-moz-progress-bar {
+    background-color: transparent;
+    background-image: url('/assets/img/icon-dot-active.png');
+    background-size: 13px 6px;
+  }
+}

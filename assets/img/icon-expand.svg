@@ -1,0 +1,11 @@
+<svg class="icon-plus-minus" width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-674.000000, -1082.000000)">
+			<g transform="translate(674.000000, 1082.000000)">
+				<ellipse class="circle" cx="14.5" cy="14.5" rx="14.5" ry="14.5"></ellipse>
+				<polygon class="plus" transform="translate(14.387251, 14.688419) rotate(-315.000000) translate(-14.387251, -14.688419) " points="9.38725083 17.5426702 12.2415018 14.6884192 9.38725083 11.8341681 11.5329998 9.68841916 14.3872508 12.5426702 17.2415018 9.68841916 19.3872508 11.8341681 16.5329998 14.6884192 19.3872508 17.5426702 17.2415018 19.6884192 14.3872508 16.8341681 11.5329998 19.6884192"></polygon>
+				<polygon class="minus" transform="translate(14.387251, 14.688419) rotate(-315.000000) translate(-14.387251, -14.688419) " points="9.38725083 17.5426702 12.2415018 14.6884192 14.3872508 12.5426702 17.2415018 9.68841916 19.3872508 11.8341681 16.5329998 14.6884192 14.3872508 16.8341681 11.5329998 19.6884192"></polygon>
+			</g>
+		</g>
+	</g>
+</svg>

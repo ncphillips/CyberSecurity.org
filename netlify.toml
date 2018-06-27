@@ -1,0 +1,11 @@
+[build]
+  publish = "_site"
+  command = "gulp build"
+
+
+[context.deploy-preview]
+  command = 'sed -i -e "s%url: \"https://localhost:4000\"%url: \""$DEPLOY_PRIME_URL"\"%" _config.test.yml && gulp build --test'
+
+
+[context.branch-deploy]
+  command = 'sed -i -e "s%url: \"https://localhost:4000\"%url: \""$DEPLOY_PRIME_URL"\"%" _config.dev.yml && gulp build --development'

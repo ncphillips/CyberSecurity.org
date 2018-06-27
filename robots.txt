@@ -1,0 +1,20 @@
+---
+layout: blank
+---
+
+User-agent: *
+
+{%- if jekyll.environment == "production" %}
+
+Disallow: /admin
+Disallow: /styleguide*
+
+Sitemap: {{ site.url }}/sitemap.xml
+
+{% else %}
+
+Disallow: /
+
+# Block everything...
+
+{% endif -%}

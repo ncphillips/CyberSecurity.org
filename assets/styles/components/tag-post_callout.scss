@@ -1,0 +1,72 @@
+.post-callout {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 200px;
+  margin: $base-spacing 0;
+  max-width: 450px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    background-color: rgba($color-black, .5);
+    border-radius: $base-border-radius;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color .2s ease-out;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    background-color: rgba($color-black, .25);
+  }
+
+  &::after {
+    @include font-smooth;
+    background-color: $color-teal;
+    box-shadow: 0 5px 5px 0 rgba($color-black, .2);
+    color: $color-white;
+    content: attr(data-ribbon);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    left: 25px;
+    line-height: 1;
+    padding: 11px 15px 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    transform: translateY(-33%);
+    z-index: 2;
+  }
+
+  .title {
+    bottom: 25px;
+    color: $color-white;
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    left: 25px;
+    line-height: 1.25;
+    margin: 0;
+    position: absolute;
+    right: 25px;
+    text-transform: none;
+    z-index: 3;
+  }
+
+  // Laptop+ ⬇
+  @media (min-width: $lap-start) {
+    .title {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+# Settings
+title:               [DOMAIN]
+description:
+url:                 [PROTOCOL][URL]
+baseurl:
+brandedurl:          [PROTOCOL][BRANDEDURL]
+email:               contact+[DOMAIN]@highereducation.com
+markdown:            kramdown
+layouts_dir:         html/layouts
+includes_dir:        html/includes
+plugins_dir:         plugins
+collections_dir:     # implement on Forestry.io changelog update: _collections
+image_base:          assets/media
+permalink:           :path/
+publisher:           [DOMAIN]
+logo:
+
+
+# Collections
+collections:
+  pages:
+    permalink:        :path/
+    output:           true
+  examples:
+    output:           true
+
+
+# Defaults
+defaults:
+  - scope:
+      path:           ""
+    values:
+      author:         "Staff Writers"
+      featured_image:
+      layout:         "default"
+  - scope:
+      path:           "admin/**"
+    values:
+      sitemap:        false
+
+
+# Widget
+widget:
+  ssr:               # e.g. https://platform.highereducation.com/widgets.html?widget=ssr-qdf&backgroundColor=%231c2128&cta=SEARCH%20SCHOOLS&ctaColor=%2308f&height=325&title=DEGREE%20FINDER&titleColor=%232D3540
+
+
+# Webmaster
+webmaster:
+  gtm: GTM-WBJKJ95
+  google_analytics:
+  google_verification:
+  bing_verification:
+
+
+# Algolia
+algolia:
+  api_id:            QT4LTISCL1
+  api_key:           9169c7a55535b7c9c9660f115b9d7db1
+  rankings:          # e.g. bacom_rankings
+  rankings_items:    # e.g. bacom_rankings_items
+  scholarships:      he_scholarships_v2.0
+  ipeds:             he_ipeds
+
+
+# Cloudinary
+cloudinary:
+  url:               https://res.cloudinary.com/highereducation/image/upload
+  markup:            default
+  breakpoints:       768|1024|1400
+  quality:           auto:good
+  format:            auto
+  flag:              lossy
+  crop:              fill
+
+
+# Output Directory ~ Excludes, Includes, and Keep on Jekyll builds.
+exclude:             [assets, html, plugins, pull_request_template.md, README.md, Gemfile, Gemfile.lock, package.json, node_modules, gulpfile.js, yarn.lock, .jshintrc, package-lock.json, netlify.toml]
+include:             [_redirects, _headers]
+keep_files:          [assets]
+
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-menus

@@ -1,0 +1,259 @@
+body {
+  background-color: $base-background-color;
+  background-position: center 95px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+
+  &.has-sub {
+    background-position: center 140px;
+  }
+
+  // Mobile-Laptop ⬇
+  @media (min-width: $desk-start - 1px) {
+    &.is-active-overlay .bg-overlay {
+      background-color: rgba($color-white, .6);
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      min-height: 100%;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 15;
+    }
+  }
+
+  // Laptop+ ⬇
+  @media (min-width: $lap-start) {
+    background-position: center 140px;
+    border-top: 5px solid $color-red;
+
+    &.has-sub {
+      background-position: center 160px;
+    }
+
+    &.is-active-overlay .bg-overlay {
+      top: 5px;
+    }
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 $body-gutter;
+
+  @media (min-width: $desk-start) {
+    max-width: $desk-max;
+  }
+
+  @media (min-width: $wall-start) {
+    max-width: $wall-max;
+  }
+}
+
+.site-content {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.entry {
+  padding-top: 30px;
+
+  @media (min-width: $lap-start) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: $desk-start) {
+    padding-top: 50px;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.entry-content {
+  > ul:last-child,
+  > :last-child {
+    margin-bottom: 60px;
+
+    @media (min-width: $lap-start) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $desk-start) {
+      margin-bottom: 100px;
+    }
+  }
+
+  > .background:last-child {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+
+    @media (min-width: $lap-start) {
+      margin-bottom: 0;
+      padding-bottom: 80px;
+    }
+
+    @media (min-width: $desk-start) {
+      margin-bottom: 0;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+// Desktop+ ⬇
+@media (min-width: $desk-start) {
+  [class^='columns'] {
+    align-items: stretch;
+    clear: both;
+    display: flex;
+    flex-flow: row nowrap;
+
+    .no-flexbox & {
+      display: table;
+      width: 100%;
+    }
+
+    .column {
+      display: table-cell;
+      margin-bottom: 0;
+      padding: 0 15px;
+      vertical-align: top;
+      width: 100%;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .columns-two .column {
+    width: 50%;
+  }
+
+  .columns-three .column {
+    width: 33.3333%;
+  }
+
+  .columns-two-third .column {
+    width: 33.3333%;
+
+    &:first-of-type {
+      flex-grow: 2;
+      width: 66.6666%;
+    }
+  }
+
+  .columns-one-third .column {
+    width: 33.3333%;
+
+    &:last-of-type {
+      flex-grow: 2;
+      width: 66.6666%;
+    }
+  }
+
+  .columns-one-fourth .column {
+    width: 25%;
+
+    &:last-of-type {
+      flex-grow: 2;
+      width: 75%;
+    }
+  }
+
+  .columns-three-fourth .column {
+    width: 75%;
+
+    &:last-of-type {
+      flex-grow: 2;
+      width: 25%;
+    }
+  }
+
+  .columns-four .column {
+    width: 25%;
+  }
+}
+
+
+// Sidebar Layout
+.sidebar-layout {
+  display: flex;
+  flex-flow: row wrap;
+
+  @media (min-width: $desk-start) {
+    display: block;
+  }
+
+  // Header/Title
+  .entry-title {
+    flex: 1 100%;
+    margin-top: 0;
+    order: 1;
+
+    @media (min-width: $desk-start) {
+      flex-basis: calc(100% - #{($sidebar-width + $body-gutter * 2)});
+      float: right;
+      width: calc(100% - #{$sidebar-width + $body-gutter * 2});
+    }
+  }
+
+  // Content
+  .entry-content {
+    flex: 1 100%;
+    order: 3;
+
+    @media (max-width: $desk-start - 1px) {
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $desk-start) {
+      float: right;
+      width: calc(100% - #{$sidebar-width + $body-gutter * 2});
+    }
+  }
+
+  // Widget
+  .widget {
+    flex: 1 100%;
+    margin: 0 auto $base-spacing;
+    order: 2;
+
+    #platform-quick-degree-finder {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    @media (min-width: $desk-start) {
+      flex-basis: $sidebar-width;
+      margin: 0 ($body-gutter * 2) $base-spacing 0;
+      width: $sidebar-width;
+    }
+  }
+
+  // Sidebar
+  .sidebar {
+    flex: 1 100%;
+    margin: $base-spacing 0;
+    order: 4;
+
+    @media (min-width: $desk-start) {
+      width: $sidebar-width;
+    }
+  }
+}

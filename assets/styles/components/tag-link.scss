@@ -1,0 +1,89 @@
+.links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: $base-spacing 0;
+}
+
+.link {
+  @include font-smooth;
+
+  align-items: left;
+  background-color: $color-teal;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px $base-border-color;
+  color: $color-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: (20 / 16);
+  margin: $small-spacing 0;
+  min-height: 75px;
+  padding: 20px 75px 20px $base-spacing;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media (min-width: $lap-start) {
+    font-size: 18px;
+    min-height: 90px;
+  }
+
+  &[data-subtitle]::before {
+    color: $color-white;
+    content: attr(data-subtitle);
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  &::after {
+    background: $color-teal-dark url('/assets/img/icon-arrow-right.svg') no-repeat center / 8px auto;
+    border-radius: 15px;
+    content: '';
+    display: block;
+    height: 29px;
+    position: absolute;
+    right: $base-spacing;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 29px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 2px $color-teal-dark, 0 0 15px rgba($color-black, .4);
+    color: $color-white;
+  }
+
+  &.type-image {
+    @media (max-width: $lap-start - 1px) {
+      background-image: none !important;
+    }
+
+    @media (min-width: $lap-start) {
+      background-position: left top;
+      background-size: 100px 100%;
+      padding-left: 120px;
+    }
+  }
+
+  .links & {
+    margin: 0 0 $small-spacing;
+
+    @media (min-width: $desk-start) {
+      flex-basis: calc(50% - 7.5px);
+      margin: 0 0 $small-spacing;
+      max-width: calc(50% - 7.5px);
+      width: calc(50% - 7.5px);
+    }
+  }
+}

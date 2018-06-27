@@ -1,0 +1,27 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <a href="{{ site.url }}/" class="logo-footer">{% svg path:/assets/img/logo-footer.svg %} &copy; {{ "now" | date: "%Y" }} {{ site.title }}</a>
+
+    <nav class="nav-footer">
+      {% include navigation-footer.html %}
+    </nav>
+
+  </div>
+
+</footer>
+
+<div class="bg-overlay"></div>
+
+</div>
+
+<script type='text/javascript' src='{{ site.url }}/assets/js/footer.js'></script>
+
+{% if jekyll.environment == "testing" or jekyll.environment == "production" %}
+  <script type="text/javascript" src="https://tags.crwdcntrl.net/c/10154/cc_ajax.js?ns=_cc10154" id="LOTCC_10154"></script>
+  <script type="text/javascript">_cc10154.bcp();</script>
+{% endif %}
+
+</body>
+</html>

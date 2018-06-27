@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="74px" viewBox="0 0 80 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 73.75 80 73.75 80 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-desktop" transform="translate(-760.000000, -1217.000000)">
+            <g id="Page-1" transform="translate(760.000000, 1217.000000)">
+                <path d="M78.75,31.25 C78.75,48.50875 64.75875,62.5 47.5,62.5 C30.24125,62.5 16.25,48.50875 16.25,31.25 C16.25,13.99125 30.24125,0 47.5,0 C64.75875,0 78.75,13.99125 78.75,31.25 Z" id="Fill-1" fill="#DEE2E7"></path>
+                <path d="M68.75,72.5 L75,72.5" id="Stroke-15" stroke="#3F4B59" stroke-width="2"></path>
+                <path d="M0,72.5 L2.5,72.5" id="Stroke-19" stroke="#3F4B59" stroke-width="2"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-22"></g>
+                <path d="M77.5,72.5 L80,72.5" id="Stroke-17" stroke="#3F4B59" stroke-width="2" mask="url(#mask-2)"></path>
+                <polygon id="Fill-21" fill="#FFFFFF" mask="url(#mask-2)" points="48.75 72.5 62.5 72.5 62.5 40 48.75 40"></polygon>
+                <polygon id="Fill-24" fill="#FFFFFF" mask="url(#mask-2)" points="11.25 72.5 25 72.5 25 61.25 11.25 61.25"></polygon>
+                <polygon id="Stroke-23" stroke="#3F4B59" stroke-width="2" mask="url(#mask-2)" points="48.75 72.5 62.5 72.5 62.5 40 48.75 40"></polygon>
+                <polygon id="Stroke-25" stroke="#3F4B59" stroke-width="2" mask="url(#mask-2)" points="11.25 72.5 25 72.5 25 61.25 11.25 61.25"></polygon>
+                <polygon id="Fill-26" fill="#DEE2E7" mask="url(#mask-2)" points="30 72.5 43.75 72.5 43.75 53.75 30 53.75"></polygon>
+                <polygon id="Stroke-27" stroke="#3F4B59" stroke-width="2" mask="url(#mask-2)" points="30 72.5 43.75 72.5 43.75 53.75 30 53.75"></polygon>
+                <path d="M66.25,72.5 L5,72.5" id="Stroke-28" stroke="#3F4B59" stroke-width="2" mask="url(#mask-2)"></path>
+                <polygon id="Fill-29" fill="#F5BE58" mask="url(#mask-2)" points="63.75 10 49.43625 10 52.9725 13.535 34.49625 32.01125 24.77375 22.28875 4.44375 42.6175 11.48875 49.71625 23.89 37.315 33.6125 47.0375 60.0425 20.60625 63.75 24.31375"></polygon>
+                <polygon id="Stroke-30" stroke="#3F4B59" stroke-width="2" mask="url(#mask-2)" points="63.75 10 49.43625 10 52.9725 13.535 34.49625 32.01125 24.77375 22.28875 4.44375 42.6175 11.48875 49.71625 23.89 37.315 33.6125 47.0375 60.0425 20.60625 63.75 24.31375"></polygon>
+                <path d="M69,28 L69,36" id="Path" stroke="#BABEC2" stroke-width="2" mask="url(#mask-2)"></path>
+                <path d="M65,32 L73,32" id="Path" stroke="#BABEC2" stroke-width="2" mask="url(#mask-2)"></path>
+                <path d="M34,9 L34,17" id="Path" stroke="#BABEC2" stroke-width="2" mask="url(#mask-2)"></path>
+                <path d="M30,13 L38,13" id="Path" stroke="#BABEC2" stroke-width="2" mask="url(#mask-2)"></path>
+                <path d="M9,22 L9,30" id="Path" stroke="#BABEC2" stroke-width="2" mask="url(#mask-2)"></path>
+                <path d="M5,26 L13,26" id="Path" stroke="#BABEC2" stroke-width="2" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

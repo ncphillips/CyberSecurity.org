@@ -1,0 +1,9 @@
+<svg version="1.1"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<defs>
+</defs>
+<path fill="#BEBFC6" d="M15.5,4.5C17.1,6.1,19,6.8,19.7,6c0.7-0.7,0-2.6-1.5-4.2l0,0c-1.6-1.6-3.5-2.3-4.2-1.5
+  C13.2,1,13.9,2.9,15.5,4.5z M7.7,15.9l8.8-8.8C17,7.4,17.5,7.6,18,7.7L8.7,17L0,20l3-8.7L12.3,2c0,0.2,0.1,0.4,0.2,0.6
+  c0.1,0.3,0.3,0.6,0.4,0.9l-8.8,8.8l1,1l8.6-8.6C14,5,14.2,5.3,14.5,5.5C14.7,5.8,15,6,15.2,6.2l-8.6,8.6L7.7,15.9z"/>
+</svg>

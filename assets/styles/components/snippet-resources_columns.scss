@@ -1,0 +1,58 @@
+.resources-columns {
+  list-style: none;
+  margin: $base-spacing 0;
+  padding: 0;
+
+  li {
+    border-left: 3px solid $color-blue-dark;
+    display: block;
+    margin: 0 0 $base-spacing;
+    padding: 0 0 0 $small-spacing;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+     > a:first-child,
+     > strong:first-child {
+      display: block;
+      font-size: 17px;
+      font-weight: 800;
+      margin: 0;
+      transform: translateY(-5px);
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desk-start) {
+    font-size: 0;
+    line-height: 0;
+    white-space-collapse: discard;
+
+    li {
+      display: inline-block;
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+      margin: $base-spacing $base-spacing 0 0;
+      vertical-align: top;
+      width: calc(50% - #{$base-spacing});
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        margin-top: 0;
+      }
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+
+       > a:first-child,
+       > strong:first-child {
+        font-size: 18px;
+      }
+    }
+  }
+}

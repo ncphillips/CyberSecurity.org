@@ -1,0 +1,10 @@
+# Netlify Redirect Rules
+# You can use hashtags to write comments.
+
+# Netlify Docs: https://www.netlify.com/docs/redirects/
+# Netlify Redirect Playground (for testing): https://play.netlify.com/redirects
+
+/home                                                               /                                          301
+/index                                                              /                                          301
+
+# Existing redirects prior to Netlify migration

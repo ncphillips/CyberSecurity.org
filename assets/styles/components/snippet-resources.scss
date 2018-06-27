@@ -1,0 +1,30 @@
+.resources {
+  list-style: none;
+  margin: $base-spacing 0;
+  padding: 0;
+
+  li {
+    border-left: 3px solid $color-blue-dark;
+    display: block;
+    margin: 0 0 $base-spacing;
+    padding: 0 0 0 $small-spacing;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    > a:first-child,
+    > strong:first-child {
+      display: block;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.6;
+      margin: 0;
+      transform: translateY(-5px);
+
+       @media (min-width: $lap-start) {
+          font-size: 18px;
+       }
+    }
+  }
+}

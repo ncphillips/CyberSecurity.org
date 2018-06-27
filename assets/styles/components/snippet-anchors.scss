@@ -1,0 +1,113 @@
+.anchors {
+  list-style: none;
+  margin: $base-spacing 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    @extend %full-width !optional;
+    background-color: $base-border-color;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: auto;
+    z-index: 0;
+  }
+
+  li {
+    align-items: center;
+    background-color: $base-background-color;
+    border: $base-border;
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      display: none;
+    }
+
+    &:last-of-type {
+      border-bottom: $base-border;
+      border-right: $base-border;
+    }
+
+    @media (max-width: $desk-start - 1px) {
+      border-bottom: 0;
+
+      &:first-of-type {
+        border-top-left-radius: $base-border-radius;
+        border-top-right-radius: $base-border-radius;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+      }
+    }
+
+    @media (min-width: $desk-start) {
+      border-right: 0;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      &:first-of-type {
+        border-bottom-left-radius: $base-border-radius;
+        border-top-left-radius: $base-border-radius;
+      }
+
+      &:last-of-type {
+        border-bottom-right-radius: $base-border-radius;
+        border-top-right-radius: $base-border-radius;
+      }
+    }
+  }
+
+  a {
+    align-items: center;
+    background-color: $color-gray-light;
+    color: $color-navy;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    height: 100%;
+    justify-content: center;
+    line-height: (18 / 15);
+    padding: 21px 10px;
+    text-align: center;
+    transition: none;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+  }
+
+  @media (min-width: $desk-start) {
+    display: flex;
+
+    &.small {
+      padding: 0 100px;
+
+      &::before {
+        display: none;
+      }
+
+      a {
+        //font-size: 14px;
+        padding-bottom: 11px;
+        padding-top: 11px;
+      }
+    }
+  }
+}

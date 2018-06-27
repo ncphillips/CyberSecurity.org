@@ -1,0 +1,75 @@
+.highlights.is-numbered {
+  counter-reset: highlights-counter;
+}
+
+.highlight {
+  .highlights & {
+    &:first-of-type .title {
+      border-radius: 0;
+    }
+  }
+
+  .title {
+    background-color: $color-teal;
+    border-radius: $base-border-radius;
+    color: $color-white;
+
+    &::after {
+      display: none;
+    }
+
+    .is-numbered & {
+      overflow: hidden;
+      padding-left: 80px;
+
+      &::before {
+        background: $color-teal-dark;
+        border-radius: $base-border-radius;
+        bottom: 0;
+        content: counter(highlights-counter);
+        counter-increment: highlights-counter;
+        font-size: 24px;
+        left: -1px;
+        line-height: 1;
+        padding: 20px 0;
+        position: absolute;
+        text-align: center;
+        top: -1px;
+        width: 60px;
+      }
+    }
+  }
+
+  &.is-active .title {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .content {
+    border: 0;
+    padding: 0;
+  }
+
+  .icon-plus-minus {
+    .circle {
+      fill: $color-white;
+    }
+
+    .minus,
+    .plus {
+      fill: $color-teal;
+    }
+  }
+}
+
+.highlight-table {
+  margin: 0;
+
+  th {
+
+    @media (min-width: $lap-start) {
+      vertical-align: top;
+      width: 30%;
+    }
+  }
+}

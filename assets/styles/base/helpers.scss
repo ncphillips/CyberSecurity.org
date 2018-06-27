@@ -1,0 +1,119 @@
+// Clearfix
+%cf {
+  @include clearfix;
+}
+
+// Floats.
+.fl-left,
+.fl-center,
+.fl-right {
+  margin: $base-spacing 0;
+
+  @media (min-width: $lap-start) {
+    max-width: 325px;
+    width: 100%;
+  }
+}
+
+@media (min-width: $lap-start) {
+  .fl-right {
+    float: right;
+    margin: 0 0 $small-spacing $small-spacing;
+  }
+
+  .fl-left {
+    float: left;
+    margin: 0 $small-spacing $small-spacing 0;
+  }
+
+  .fl-center {
+    margin: $base-spacing auto;
+  }
+}
+
+// Text Aligns.
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Helpers
+.muted {
+  filter: alpha(opacity = 50);
+  opacity: .5;
+}
+
+.go::after {
+  content: ' »';
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.hide {
+  left: -9999px;
+  position: absolute;
+}
+
+
+// Colors
+.color-blue {
+  color: $color-blue;
+}
+
+.color-green {
+  color: $color-green;
+}
+
+.color-red {
+  color: $color-red;
+}
+
+.color-anchor {
+  color: $color-anchor;
+}
+
+.color-teal {
+  color: $color-teal;
+}
+
+.color-navy {
+  color: $color-navy;
+}
+
+// Better Image Replacement
+@mixin hidden-text {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Font Smoothing
+@mixin font-smooth() {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Full Width
+%full-width {
+  display: none;
+
+  // Desktop ⬇
+  @media (min-width: $desk-start) {
+    display: block;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    right: 50%;
+    width: 100vw;
+  }
+}

@@ -1,0 +1,373 @@
+.rankings {
+  border: 0;
+  height: 300px;
+
+  td,
+  th,
+  tr {
+    border: 0;
+  }
+
+  tr {
+    display: block;
+    position: relative;
+
+    &:hover,
+    &.is-active {
+      .title,
+      .toggle {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  td {
+    display: block;
+    float: none;
+    min-height: 45px;
+    padding: 15px;
+
+    &::before {
+      display: none !important;
+    }
+
+    @media (min-width: $lap-start) {
+      float: left;
+      min-height: 75px;
+      padding: 25px;
+    }
+  }
+
+  .js-toggle {
+    cursor: pointer;
+  }
+
+  // Header w/Control Buttons
+  .header {
+    display: block;
+    padding: 20px $base-spacing 18px;
+    position: relative;
+
+    @media (min-width: $lap-start) {
+      padding-right: 265px;
+    }
+  }
+
+  // Rank
+  .rank {
+    @include font-smooth;
+
+    align-items: center;
+    background-color: $color-teal;
+    border: 1px solid $color-teal-dark;
+    border-right: 4px solid $color-teal-dark;
+    border-top: 0;
+    color: $color-white;
+    display: flex;
+    font-size: 36px;
+    font-weight: 800;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 55px;
+
+    &:first-of-type {
+      margin: 0;
+    }
+
+    @media (min-width: $lap-start) {
+      width: 75px;
+    }
+  }
+
+  // Title
+  .title {
+    @include font-smooth;
+
+    align-items: center;
+    background-color: $color-gray-light;
+    border-bottom: $base-border;
+    display: flex;
+    left: 55px;
+    padding: $base-spacing 75px $base-spacing $base-spacing;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 55px);
+
+    h4 {
+      color: $color-blue;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    @media (min-width: $lap-start) {
+      left: 0;
+      padding-right: 25px;
+      position: relative;
+      width: calc(100% - 155px);
+
+      &.has-score {
+        width: calc(100% - 345px);
+      }
+    }
+  }
+
+  // Score
+  .score {
+    align-items: center;
+    background: $color-teal;
+    border: 1px solid $color-teal-dark;
+    border-right: 4px solid $color-teal-dark;
+    border-top: 0;
+    color: $color-white;
+    display: flex;
+    font-size: 9px;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+
+    span {
+      font-size: 20px;
+      font-style: normal;
+      line-height: 1;
+      margin: 2px 0 0;
+      padding: 0 5px;
+
+      span:first-child {
+        margin-top: 10px;
+        text-align: right;
+      }
+    }
+
+    small {
+      display: block;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    strong {
+      @include font-smooth;
+
+      font-size: 34px;
+      line-height: 1;
+      position: relative;
+      top: -3px;
+    }
+
+    .score-content::after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    .label,
+    .number {
+      float: left;
+      width: 50%;
+    }
+
+
+    @media (max-width: $lap-start - 1px) {
+      display: none;
+      height: 75px !important;
+    }
+
+    @media (min-width: $lap-start) {
+      width: 190px;
+    }
+  }
+
+  @media (max-width: $lap-start - 1px) {
+    .is-active .score {
+      display: flex;
+    }
+  }
+
+  .toggle {
+    background-color: $color-gray-light;
+    border-bottom: $base-border;
+    border-left: $base-border;
+    border-right: $base-border;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+
+    @media (min-width: $lap-start) {
+      border-left: 0;
+      border-right: $base-border;
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 80px;
+    }
+
+    svg {
+      overflow: visible;
+    }
+  }
+
+  .icon-plus-minus {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  // Content
+  .content {
+    background-color: $color-white;
+    border-bottom: $base-border;
+    border-left: $base-border;
+    border-right: $base-border;
+    display: none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+     > .image {
+      display: none;
+      left: -1px;
+      max-width: calc(100% + 2px);
+      position: relative;
+      right: -1px;
+      width: calc(100% + 2px);
+      z-index: 2;
+    }
+
+    @media (min-width: $lap-start) {
+       > .image {
+        border-bottom: $base-border;
+        display: block;
+      }
+
+      &.has-meta::after {
+        background-color: $base-border-color;
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 300px;
+        position: absolute;
+        top: 0;
+        width: 1px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .is-active .content {
+    display: block;
+  }
+
+  // Meta Column
+  .meta {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+
+    .stat {
+      border-bottom: $base-border;
+      display: none;
+      padding: 20px 20px 20px 70px;
+      position: relative;
+
+      &:nth-child(-n+4) {
+        display: block;
+      }
+    }
+
+    &.is-active {
+      .stat {
+        display: block;
+      }
+
+      .btn-link {
+        border-top: $base-border;
+
+        &::before {
+          content: 'View Less';
+        }
+      }
+    }
+
+    .icon {
+      color: $color-gray-dark;
+      width: 32px;
+
+      svg {
+        height: initial;
+        left: 20px;
+        max-height: 32px;
+        overflow: visible;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+      }
+    }
+
+    .label {
+      color: $color-navy;
+      display: block;
+      font-size: 13px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .btn-link {
+      border-bottom: $base-border;
+      border-radius: 0;
+      border-top: 0;
+
+      &::before {
+        content: 'View All';
+      }
+    }
+
+    @media (min-width: $lap-start) {
+      float: left;
+      width: 300px;
+    }
+
+    // Desktop+ ⬇
+    @media (min-width: $desk-start) {
+      width: 300px;
+
+      .stat {
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .description {
+    margin: 0;
+    padding: $base-spacing;
+
+    .image {
+      margin: (-$base-spacing) (-$base-spacing) $small-spacing;
+      max-width: calc(100% + 50px);
+      width: calc(100% + 50px);
+    }
+  }
+
+  .has-meta .description {
+    @media (min-width: $lap-start) {
+      float: left;
+      width: calc(100% - 300px);
+    }
+  }
+
+  // Veiw List
+   + .rankings-preview {
+    text-align: center;
+
+    a {
+      margin: 0;
+    }
+  }
+}

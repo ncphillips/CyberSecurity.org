@@ -1,0 +1,208 @@
+// Content - Collapsible Block
+$tabs-height: 70px;
+$tabs-horizontal-width: null !default;
+$tabs-vertical-width: 27%;
+
+.collapsible {
+  background: $color-white;
+  border: $base-border;
+  border-bottom: 0;
+  border-radius: $base-border-radius;
+  box-sizing: border-box;
+  display: block;
+  margin: 25px 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+  @media (min-width: $desk-start) {
+    // TABS VERTICAL
+    &.type-tabs-vertical {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+
+      @for $i from 1 through 10 {
+        &[data-count='#{$i}'] {
+          min-height: $tabs-height * $i;
+        }
+      }
+    }
+  }
+}
+
+.collapsible-title {
+  @include font-smooth;
+
+  background-color: $color-gray-light;
+  border-bottom: $base-border;
+  color: $color-blue;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  padding: 18px 100px 18px $base-spacing;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    background-color: $color-white;
+  }
+
+  &.is-active {
+    .type-tabs-horizontal &,
+    .type-tabs-vertical &,
+    .type-accordion & {
+      background-color: $color-white;
+      color: $color-navy;
+    }
+
+     + .collapsible-content {
+      display: block;
+    }
+  }
+
+  .icon-plus-minus {
+    right: 15px;
+
+    @media (min-width: $desk-start) {
+      .type-tabs-horizontal &,
+      .type-tabs-vertical & {
+        display: none;
+      }
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .icon {
+    margin-right: 5px;
+    width: 25px;
+
+    svg {
+      height: inherit;
+      max-height: 25px;
+      width: 25px;
+    }
+  }
+
+
+  @media (min-width: $desk-start) {
+    font-size: 18px;
+
+    // TABS HORIZONTAL/VERTICAL
+    .type-tabs-horizontal &,
+    .type-tabs-vertical & {
+      display: block;
+      height: $tabs-height;
+      line-height: $tabs-height;
+      overflow: hidden;
+      padding: 0 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    // TABS HORIZONTAL
+    .type-tabs-horizontal & {
+      border: 0;
+      border-bottom: $base-border;
+      border-right: $base-border;
+      float: left;
+      margin: 0;
+      text-align: center;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+
+      @if $tabs-horizontal-width !=null {
+        width: $tabs-horizontal-width;
+      } @else {
+        @for $i from 1 through 10 {
+          &:first-child:nth-last-child(#{$i}),
+          &:first-child:nth-last-child(#{$i}) ~ .collapsible-title {
+            width: #{100% / ($i / 2)};
+          }
+        }
+      }
+    }
+
+    // TABS VERTICAL
+    .type-tabs-vertical & {
+      border: $base-border;
+      border-bottom: 0;
+      left: 0;
+      position: absolute;
+      width: $tabs-vertical-width;
+
+      &:last-of-type {
+        border-bottom: $base-border;
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          top: ($tabs-height * ($i - 1));
+        }
+      }
+    }
+  }
+}
+
+.collapsible-content {
+  border-bottom: $base-border;
+  display: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 25px;
+  width: 100%;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desk-start) {
+    // TABS HORIZONTAL
+    .type-tabs-horizontal & {
+      float: right;
+      margin: $tabs-height 0 0 -100%;
+    }
+
+    // TABS VERTICAL
+    .type-tabs-vertical & {
+      background: $color-white;
+      border: $base-border;
+      border-left: 0;
+      left: $tabs-vertical-width;
+      position: relative;
+      top: 0;
+      width: calc(100% - #{$tabs-vertical-width});
+
+      &::before {
+        background-color: $base-border-color;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 100%;
+        left: -1px;
+        position: absolute;
+        top: 0;
+        width: 1px;
+      }
+    }
+  }
+}

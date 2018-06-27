@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="87px" viewBox="0 0 81 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-desktop" transform="translate(-280.000000, -1036.000000)">
+            <g id="Page-1" transform="translate(280.000000, 1037.000000)">
+                <path d="M62,52 C62,69.1202667 48.1202667,83 31,83 C13.8797333,83 0,69.1202667 0,52 C0,34.8797333 13.8797333,21 31,21 C48.1202667,21 62,34.8797333 62,52" id="Fill-1" fill="#DEE2E7"></path>
+                <polygon id="Fill-3" fill="#FFFFFF" points="25.578375 27 25.5 27 9 36.5925926 9 54.4074074 25.5385 64 42 54.4074074 42 36.5925926"></polygon>
+                <polygon id="Stroke-5" stroke="#3F4B59" stroke-width="2" points="25.578375 27 25.5 27 9 36.5925926 9 54.4074074 25.5385 64 42 54.4074074 42 36.5925926"></polygon>
+                <polyline id="Stroke-7" stroke="#3F4B59" stroke-width="2" points="9 37 25.539875 47 42 37"></polyline>
+                <path d="M25,47 L25,65" id="Stroke-9" stroke="#2A5082" stroke-width="2"></path>
+                <path d="M77,18 L77,26" id="Stroke-11" stroke="#BABEC2" stroke-width="2"></path>
+                <path d="M73,22 L81,22" id="Stroke-13" stroke="#BABEC2" stroke-width="2"></path>
+                <path d="M10,11 L10,19" id="Stroke-15" stroke="#BABEC2" stroke-width="2"></path>
+                <path d="M6,15 L14,15" id="Stroke-17" stroke="#BABEC2" stroke-width="2"></path>
+                <polygon id="Fill-19" fill="#F5BE58" points="41.578375 3 41.5 3 25 12.5576923 25 64.4423077 41.5385 74 58 64.4423077 58 12.5576923"></polygon>
+                <polygon id="Stroke-21" stroke="#3F4B59" stroke-width="2" points="41.578375 3 41.5 3 25 12.5576923 25 64.4423077 41.5385 74 58 64.4423077 58 12.5576923"></polygon>
+                <polyline id="Stroke-23" stroke="#3F4B59" stroke-width="2" points="25 12 41.5385 22 58 12"></polyline>
+                <path d="M41,22 L41,74" id="Stroke-25" stroke="#3F4B59" stroke-width="2"></path>
+                <polygon id="Fill-27" fill="#DEE2E7" points="57.578375 26 57.5 26 41 35.6666667 41 74.3333333 57.5385 84 74 74.3333333 74 35.6666667"></polygon>
+                <polygon id="Stroke-29" stroke="#3F4B59" stroke-width="2" points="57.578375 26 57.5 26 41 35.6666667 41 74.3333333 57.5385 84 74 74.3333333 74 35.6666667"></polygon>
+                <polyline id="Stroke-31" stroke="#3F4B59" stroke-width="2" points="41 36 57.5385 46 74 36"></polyline>
+                <path d="M58,45 L58,83" id="Stroke-33" stroke="#3F4B59" stroke-width="2"></path>
+                <path d="M73,4 C73,6.2089155 71.2089155,8 69,8 C66.7910845,8 65,6.2089155 65,4 C65,1.7910845 66.7910845,0 69,0 C71.2089155,0 73,1.7910845 73,4 Z" id="Stroke-35" stroke="#BABEC2" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

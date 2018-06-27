@@ -1,0 +1,74 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: title
+  default: ''
+  config:
+    required: true
+- type: text
+  name: permalink
+  label: Permalink
+  description: e.g. /degrees/bachelors/
+- type: select
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - default
+    - index
+    - rankings
+    - sidebar
+  label: Layout
+  name: layout
+  default: default
+- type: text
+  name: seo_title
+  label: SEO TITLE
+  description: Replaces <title></title> with a more descriptive title.
+- type: textarea
+  name: description
+  label: Description
+- type: datetime
+  name: date
+  label: Date Published
+  config:
+    display_utc: true
+    required: true
+    date_format: MM-DD-YYYY
+- type: datetime
+  label: Date Modified
+  name: last_modified_at
+  config:
+    required: false
+- type: file
+  name: featured_image
+  label: Featured Image
+- type: text
+  name: author
+  label: Author
+- type: textarea
+  name: keywords
+  label: Keywords
+- type: select
+  name: robots
+  config:
+    source:
+      type: simple
+    options:
+    - noindex, nofollow
+    - noindex, follow
+    - index, nofollow
+  label: Robots
+- type: boolean
+  name: sitemap
+  label: Sitemap
+  description: Exclude from sitemap?
+- type: boolean
+  name: show_widget
+  label: Show Widget
+  description: Widget for "sidebar" layout.
+pages:

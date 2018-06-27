@@ -1,0 +1,412 @@
+// Filters
+.filters {
+  @include font-smooth;
+
+  background-color: $color-anchor;
+  margin: 0 (-$body-gutter);
+  padding: 0 0 1px;
+  position: relative;
+
+  @media (min-width: $desk-start) {
+    border-radius: $base-border-radius;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+// Filter Section Titles
+.filter-title {
+  background-color: $color-navy;
+  color: $color-white;
+  font-size: 11px;
+  font-weight: 800;
+  margin: 0;
+  padding: $body-gutter $small-spacing;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $lap-start) {
+    text-align: left;
+  }
+}
+
+// Search
+.ais-search-box {
+  margin-bottom: $base-spacing;
+  padding: 0 $small-spacing;
+  position: relative;
+
+  input {
+    background: $color-navy url('/assets/img/icon-magnify.svg') no-repeat 15px center / auto 17px;
+    border: 2px solid $color-navy;
+    box-shadow: inset 0 2px 2px 0 rgba($color-black, .5);
+    color: $color-white;
+    font-size: 14px;
+    margin: 25px 0;
+    outline: 0;
+    padding: 12px 15px 12px 45px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: rgba($color-white, .2);
+      box-shadow: inset 0 2px 2px 0 rgba($color-black, .5);
+    }
+  }
+}
+
+// Filter Section
+.filter-section {
+  color: $color-white;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0;
+  position: relative;
+}
+
+// Filter Control (Hide Filters/Show Filters)
+.filter-control {
+  background: transparent url('/assets/img/icon-filters.svg') no-repeat right $small-spacing center / 20px;
+  border-bottom: 1px solid rgba($color-white, .1);
+  border-top: 1px solid rgba($color-white, .1);
+  cursor: pointer;
+  display: block;
+  line-height: 1;
+  padding: 20px 45px 15px $small-spacing;
+  position: relative;
+  text-transform: uppercase;
+
+  &::after {
+    content: 'Show Filters';
+    display: block;
+  }
+
+  .is-active &::after {
+    content: 'Hide Filters';
+  }
+
+  &:hover {
+    background-color: rgba($color-white, .02);
+  }
+
+  @media (min-width: $desk-start) {
+    display: none;
+  }
+}
+
+// Filter Categories
+.filter-category {
+  display: none;
+
+  .is-active & {
+    display: block;
+  }
+
+  .filter-options {
+    display: none;
+    margin: 0 $small-spacing;
+  }
+
+  &.is-active {
+    .filter-options {
+      display: block;
+    }
+  }
+
+  [id^='algolia-toggle-']:first-child,
+  .check-button:first-child,
+  .filter-expand-item:first-child {
+    margin-top: 10px;
+  }
+
+  [id^='algolia-toggle-']:last-child,
+  .check-button:last-child,
+  .filter-expand-item:last-child {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desk-start) {
+    display: block;
+  }
+}
+
+// Filter Labels
+.filter-label {
+  border-bottom: 1px solid rgba($color-white, .1);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  margin: 0;
+  padding: 20px 45px 20px $small-spacing;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba($color-white, .02);
+  }
+
+  .filter-category.is-active + .filter-category & {
+    border-top: 1px solid rgba($color-white, .1);
+  }
+
+  &::after {
+    content: '+';
+    display: block;
+    font-size: 22px;
+    position: absolute;
+    right: $small-spacing;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .filter-category.is-active &::after {
+    content: '\2013'; // en dash
+  }
+}
+
+// Filter Item
+.ais-toggle--item,
+.ais-refinement-list--item {
+  cursor: pointer;
+  padding: 6px 0;
+  position: relative;
+
+  * {
+    cursor: inherit;
+    position: inherit;
+  }
+
+  &:hover,
+  &.active {
+    label {
+      color: $color-white;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 17px;
+    margin: 0;
+    padding-left: 28px;
+
+    &::before {
+      background-color: $color-navy;
+      border-radius: 1px;
+      box-shadow: inset 0 1px 3px 0 rgba($color-black, .5);
+      content: '';
+      display: block;
+      height: 16px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+    }
+
+    &::after {
+      background: $color-blue url('/assets/img/icon-checkmark-white.svg') no-repeat center center / 11px auto;
+      border-radius: 1px;
+      content: '';
+      display: none;
+      height: 18px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+    }
+  }
+}
+
+// Item Count
+.filter-count {
+  background-color: $color-navy;
+  border-radius: 1px;
+  box-shadow: inset 0 1px 3px 0 rgba($color-black, .5);
+  color: rgba($color-white, .4);
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px 5px 4px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .custom-checkbox & {
+    display: none;
+  }
+
+  .filter-expand-item:hover &,
+  .active & {
+    color: $color-white;
+  }
+}
+
+// Refined Value Tags
+#algolia-currentRefinedValues {
+  margin-top: $base-spacing;
+
+   > div {
+    @extend %cf;
+
+    margin: 0 0 $base-spacing;
+  }
+
+  .ais-header {
+    color: rgba($color-navy, .4);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .ais-current-refined-values--item {
+    float: left;
+    margin: 5px 5px 0 0;
+  }
+
+  .ais-current-refined-values--link {
+    @include font-smooth;
+
+    background-color: $color-blue;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    color: $color-white;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    margin: 0;
+    padding: 8px 40px 8px 10px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+      content: '\00d7';
+      display: block;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 20px;
+      opacity: .5;
+      position: absolute;
+      right: 10px;
+      top: calc(50% - 10px);
+    }
+
+    &:hover {
+      background: $color-blue-dark;
+    }
+  }
+
+  .ais-current-refined-values--count {
+    display: none;
+  }
+}
+
+// Clear Button
+.ais-clear-all--link {
+  display: block;
+  margin: $base-spacing;
+  text-align: center;
+}
+
+// Pagination
+.algolia-pagination {
+  @include font-smooth;
+
+  color: $color-white;
+  margin-top: $small-spacing;
+  text-align: center;
+
+  .ais-pagination {
+    @include clearfix;
+
+    background-color: $color-teal;
+    border-radius: $base-border-radius;
+    display: block;
+    font-weight: 800;
+    margin: $small-spacing 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    li::before {
+      display: none;
+    }
+
+    .ais-pagination--item {
+      border-right: 1px solid $color-teal-dark;
+      display: block;
+      float: left;
+      width: 25%;
+      font-size: 13px;
+      line-height: 1;
+      margin: 0;
+      padding: 15px 0;
+
+      &.ais-pagination--item__page {
+        display: none;
+        border-right: 0;
+      }
+
+      &.ais-pagination--item__disabled {
+        visibility: visible;
+
+        .ais-pagination--link {
+          color: currentColor;
+          opacity: .3;
+        }
+      }
+
+      &.ais-pagination--item__last {
+        border-right: 0;
+      }
+
+      &.ais-pagination--item__active a {
+        cursor: default;
+        opacity: .3;
+      }
+
+      a {
+        color: currentColor;
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: $lap-start) {
+      display: inline-block;
+
+      .ais-pagination--item {
+        border: 0;
+        display: inline-block;;
+        float: none;
+        font-size: 16px;
+        padding: 17px 12px 15px;
+        width: initial;
+
+        &.ais-pagination--item__page {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+// No Results
+.ais-hits__empty {
+  background-color: $color-white;
+  border: 3px solid $base-border-color;
+  font-style: italic;
+  padding: $small-spacing $base-spacing;
+}

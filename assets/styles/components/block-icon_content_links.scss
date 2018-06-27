@@ -1,0 +1,115 @@
+.icon-content-links {
+  display: block;
+  margin: $base-spacing 0;
+
+  @media (min-width: $lap-start) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.icon-content-link {
+  color: $base-font-color;
+  background-color: $color-white;
+  border-radius: $base-border-radius;
+  box-shadow: 0 10px 15px 4px rgba($color-black, .1);
+  display: block;
+  margin: $base-spacing 0;
+  padding: $base-spacing;
+  position: relative;
+
+  .icon-content-links & {
+    margin: 0 0 $small-spacing;
+
+    @media (min-width: $lap-start) {
+      flex-basis: calc(50% - 7.5px);
+      margin: 0 0 $small-spacing;
+      max-width: calc(50% - 7.5px);
+      width: calc(50% - 7.5px);
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: $color-red url('/assets/img/icon-arrow-right.svg') no-repeat center / 8px auto;
+    border-radius: 15px;
+    position: absolute;
+    top: $base-spacing;
+    right: $base-spacing;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $base-font-color;
+    box-shadow: inset 0 0 0 3px $color-red, 0 10px 15px 4px rgba($color-black, .1);
+
+    .title {
+      color: $color-red;
+    }
+  }
+
+  .icon {
+    color: $color-green;
+    display: block;
+    height: 40px;
+    left: $base-spacing;
+    margin: 0;
+    position: absolute;
+    top: $base-spacing;
+    width: 40px;
+
+    svg {
+      height: inherit;
+      max-height: 40px;
+      width: 40px;
+    }
+  }
+
+  .title {
+    margin: 0 0 $small-spacing;
+    min-height: 50px;
+    padding: 0 50px;
+    text-transform: uppercase;
+
+    em {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+
+  @media (min-width: $lap-start) {
+    .icon {
+      margin: 0;
+    }
+
+    .title {
+      min-height: auto;
+    }
+  }
+
+  @media (min-width: $desk-start) {
+    padding-left: 125px;
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      top: 30px;
+
+      svg {
+        max-height: 80px;
+        width: 80px;
+      }
+    }
+
+    .title {
+      padding-left: 0;
+    }
+  }
+}

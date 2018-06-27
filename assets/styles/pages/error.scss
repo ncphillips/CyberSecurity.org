@@ -1,0 +1,19 @@
+.page-error {
+
+  .entry-title {
+    margin-bottom: $small-spacing;
+    text-align: center;
+  }
+
+  .entry-content {
+    text-align: center;
+    
+    p {
+      margin-bottom: 0;  
+    }
+
+    .btn {
+      margin-top: $base-spacing;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "../settings";
+
+.index-page {
+
+  @media (min-width: $desk-start) {
+    background-image: url("https://res.cloudinary.com/highereducation/image/upload/v1529684032/TeachingDegree.org/homepage/bg-home.png");
+    background-position: right -100px top;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  @media (min-width: $wall-start) {
+    background-position: right top;
+  }
+
+  // Section: Become a Teacher
+  .become-a-teacher {
+    background-image: url("https://res.cloudinary.com/highereducation/image/upload/v1529684032/TeachingDegree.org/homepage/bg-home.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    margin: 0 -15px;
+    padding: 0 15px 250px;
+
+    @media (min-width: 450px) {
+      padding-bottom: 225px;
+    }
+
+    @media (min-width: $lap-start) {
+      background-size: 700px auto;
+      padding-bottom: 300px;
+    }
+
+    @media (min-width: $desk-start) {
+      background: none;
+      padding-bottom: 25px;
+    }
+
+    @media (min-width: $wall-start) {
+      padding-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 38px;
+      line-height: (45 / 40);
+
+      small {
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      @media (min-width: $lap-start) {
+        margin: $small-spacing 0 $base-spacing;
+      }
+
+      @media (min-width: $desk-start) {
+        font-size: 48px;
+        line-height: (55 / 48);
+
+        small {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  // Sectin: Why Online
+  .why-online {
+    background-image: url("https://res.cloudinary.com/highereducation/image/upload/b_rgb:F5F7F7,a_hflip,e_gradient_fade:100,y_-0.5/v1526926074/TeachingDegree.org/homepage/img-why-online.jpg");
+    background-size: 100% auto;
+    padding-top: 175px !important;
+
+    @media (min-width: $lap-start) {
+      padding-top: 325px !important;
+    }
+
+    @media (max-width: $desk-start - 1px) {
+      border-bottom: 20px solid $color-gray-dark !important;
+    }
+
+    @media (min-width: $desk-start) {
+      background-image: url("https://res.cloudinary.com/highereducation/image/upload/b_rgb:F5F7F7,o_90,a_hflip,e_gradient_fade:90,x_-0.5/v1526926074/TeachingDegree.org/homepage/img-why-online.jpg");
+      background-size: auto 100%;
+      padding-top: 65px !important; // Reset.
+    }
+  }
+}

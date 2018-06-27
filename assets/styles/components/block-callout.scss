@@ -1,0 +1,85 @@
+.callout {
+  @include font-smooth;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  float: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: (34 / 22);
+  margin: $base-spacing auto;
+  padding: 55px $small-spacing $base-spacing;
+  position: relative;
+
+  &::before {
+    background-color: rgba($color-black, .2);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  &::after {
+    color: $color-white;
+    content: '“';
+    font-size: 100px;
+    font-weight: 800;
+    left: 15px;
+    line-height: 1;
+    position: absolute;
+    top: 5px;
+  }
+
+  p {
+    font-size: inherit;
+    font-style: inherit;
+    margin: 0 0 $small-spacing;
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: underline;
+  }
+
+  cite {
+    display: block;
+    font-size: 14px;
+    margin: 5px 0 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '~';
+      display: inline-block;
+      margin-right: 3px;
+    }
+  }
+
+  @media (min-width: $lap-start) {
+    font-size: 22px;
+    padding: 50px 150px;
+
+    &::after {
+      left: 75px;
+      top: 40px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Directory Links Arrow</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-Directory-Links-Arrow-25x25px" fill="#FFFFFF">
+            <path d="M6.29212629,24.7054514 C6.68128841,25.0978921 7.31262173,25.0984735 7.702366,24.7054514 L19.0975103,13.2115895 C19.4869635,12.8185674 19.4869635,12.1816506 19.0975103,11.7886285 L7.702366,0.294766585 C7.31262173,-0.0982555282 6.68187056,-0.0982555282 6.29212629,0.294766585 C5.9026731,0.687788697 5.9026731,1.32412406 6.29183522,1.71714617 L16.6842394,12.5002543 L6.29212629,23.2830718 C5.9026731,23.6760939 5.9026731,24.3124293 6.29212629,24.7054514 Z" id="Chevron-thin-right"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,71 @@
+.resource {
+  .header {
+    @include font-smooth;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    color: $color-white;
+    float: none;
+    line-height: (34 / 22);
+    margin: $base-spacing auto 0;
+    padding: 30px $base-spacing;
+    position: relative;
+
+    @media (min-width: $lap-start) {
+      padding: 35px 200px 35px 35px;
+
+      &.has-icon {
+        padding-left: 80px;
+      }
+    }
+  }
+
+  .icon {
+    height: 35px;
+    margin: 0 $small-spacing 0 0;
+    opacity: .3;
+    width: 30px;
+
+    svg {
+      height: inherit;
+      max-height: 35px;
+      width: 30px;
+    }
+
+    @media (min-width: $lap-start) {
+      left: 40px;
+      margin: 0;
+      position: absolute;
+      top: 35px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .title {
+    color: currentColor;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 $small-spacing;
+
+    @media (min-width: $lap-start) {
+      font-size: 24px;
+    }
+  }
+
+  .btn {
+    margin: $small-spacing 0 0;
+
+    @media (max-width: $lap-start - 1px) {
+      display: block;
+    }
+  }
+
+  .resource-table {
+    border-bottom: 5px solid $color-blue;
+    margin: 0;
+  }
+}

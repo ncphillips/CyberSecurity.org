@@ -1,0 +1,46 @@
+.intro {
+  background-color: $color-white;
+  border: $base-border;
+  margin: $small-spacing 0;
+  padding: $base-spacing;
+  position: relative;
+  text-align: center;
+
+  .image {
+    background-color: $color-white;
+    border: 4px solid $color-white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba($color-black, .5);
+    height: 100px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+
+  @media (min-width: $lap-start) {
+    text-align: left;
+
+    &.has-image {
+      padding-left: 150px;
+    }
+
+    .image {
+      left: 25px;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  h1:first-of-type,
+  h2:first-of-type,
+  h3:first-of-type,
+  h4:first-of-type,
+  h5:first-of-type {
+    margin: 0 0 15px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

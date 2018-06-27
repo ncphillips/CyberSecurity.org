@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Sticky Nav Guide Dropdown- Arrow</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-Sticky-Nav-Guide-Dropdown-Arrow-25x25px" fill="#FFFFFF">
+            <g id="Dropdown-Arrow" transform="translate(12.500000, 12.394737) rotate(-180.000000) translate(-12.500000, -12.394737) translate(0.000000, 4.500000)">
+                <path d="M18.7760999,6.33123815 L9.31747529,-3.1270143 C8.38402533,-4.0593477 6.87256588,-4.0593477 5.93930201,-3.12608383 C5.00585205,-2.19226168 5.00585205,-0.680988327 5.93930201,0.250786784 L13.7093052,8.02097611 L5.93930201,15.7924681 C5.00585205,16.7244293 5.00585205,18.2358888 5.93930201,19.1695248 C6.40602699,19.634761 7.01734739,19.8673791 7.62773732,19.8673791 C8.23794115,19.8673791 8.85075031,19.634761 9.31747529,19.1695248 L18.7760999,9.70959752 C18.892409,9.5919858 18.9945749,9.46655811 19.0811088,9.33461712 C19.6952206,8.40768046 19.5928686,7.14837905 18.7760999,6.33123815 Z" id="Fill-1" transform="translate(12.357635, 8.020616) rotate(-90.000000) translate(-12.357635, -8.020616) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

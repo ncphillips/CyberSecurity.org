@@ -1,0 +1,67 @@
+.scholarship {
+  border: $base-border;
+
+  .scholarships & {
+    border-bottom: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+
+    &:first-of-type {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: $base-border;
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  .title {
+    background-color: $color-gray-light;
+    color: $action-color;
+
+    &:hover {
+      background-color: $color-white;
+    }
+
+    @media (min-width: $lap-start) {
+      &.has-amount {
+        padding-right: 315px;
+      }
+    }
+  }
+
+  &.is-active .title {
+    background-color: $color-white;
+    color: $color-navy;
+  }
+
+  .amount {
+    color: $color-red;
+    display: block;
+    font-size: 20px;
+    margin: $small-spacing 0 0;
+
+    @media (min-width: $lap-start) {
+      font-size: 24px;
+      margin: 0;
+      position: absolute;
+      right: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .content {
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-tertiary {
+    display: block;
+    margin: 30px 0 0;
+  }
+}

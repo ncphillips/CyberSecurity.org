@@ -1,0 +1,120 @@
+// Ipeds/Scholarships Container
+.algolia-container {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+  // Filters
+  .filters {
+    width: calc(100% + #{$body-gutter * 2});
+
+    @media (min-width: $desk-start) {
+      float: left;
+      width: $sidebar-width;
+    }
+  }
+
+  // Results
+  .results {
+    @media (min-width: $desk-start) {
+      float: right;
+      width: calc(100% - #{$sidebar-width + $body-gutter});
+    }
+  }
+
+  @media (min-width: $desk-start) {
+    display: block;
+
+    #algolia-currentRefinedValues {
+      margin-top: 0;
+    }
+  }
+
+  // Count
+  .result-stats {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 2px;
+  }
+
+  .ais-hits--item {
+    .item {
+      border-radius: 0;
+      border-top: 0;
+    }
+
+    &:last-of-type .item {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  // Results
+  .item {
+    border: $base-border;
+    border-bottom: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+
+    &:first-of-type {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: $base-border;
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+
+    .title {
+      background-color: $color-gray-light;
+      color: $action-color;
+
+      &:hover {
+        background-color: $color-white;
+      }
+
+      @media (min-width: $lap-start) {
+        &.has-amount {
+          padding-right: 315px;
+        }
+      }
+    }
+
+    &.is-active .title {
+      background-color: $color-white;
+      color: $color-navy;
+    }
+
+    .amount {
+      color: $color-green;
+      display: block;
+      font-size: 20px;
+      margin: $small-spacing 0 0;
+
+      @media (min-width: $lap-start) {
+        font-size: 24px;
+        margin: 0;
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .content {
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn-tertiary {
+      display: block;
+      margin: 30px 0 0;
+    }
+  }
+}
