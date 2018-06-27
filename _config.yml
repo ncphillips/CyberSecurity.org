@@ -12,7 +12,7 @@ plugins_dir:         plugins
 collections_dir:     # implement on Forestry.io changelog update: _collections
 image_base:          assets/media
 permalink:           :path/
-publisher:           CyberSecurity.org
+publisher:           businessanalytics.com # CyberSecurity.org needs to be added to Platform Publishers
 logo:
 
 
@@ -41,7 +41,7 @@ defaults:
 
 # Widget
 widget:
-  ssr:               # e.g. https://platform.highereducation.com/widgets.html?widget=ssr-qdf&backgroundColor=%231c2128&cta=SEARCH%20SCHOOLS&ctaColor=%2308f&height=325&title=DEGREE%20FINDER&titleColor=%232D3540
+  ssr:               https://platform.highereducation.com/widgets.html?widget=ssr-qdf&backgroundColor=%23003652&cta=SEARCH%20SCHOOLS&ctaColor=%23FFCA00&height=325&title=FIND%20A%20DEGREE&titleColor=%23001F30
 
 
 # Webmaster
@@ -56,8 +56,8 @@ webmaster:
 algolia:
   api_id:            QT4LTISCL1
   api_key:           9169c7a55535b7c9c9660f115b9d7db1
-  rankings:          # e.g. bacom_rankings
-  rankings_items:    # e.g. bacom_rankings_items
+  rankings:          bacom_rankings
+  rankings_items:    bacom_rankings_items
   scholarships:      he_scholarships_v2.0
   ipeds:             he_ipeds
 
