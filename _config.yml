@@ -13,7 +13,7 @@ collections_dir:     # implement on Forestry.io changelog update: _collections
 image_base:          assets/media
 permalink:           :path/
 publisher:           businessanalytics.com # CyberSecurity.org needs to be added to Platform Publishers
-logo:
+logo:                /assets/img/logo.png
 
 
 # Collections
