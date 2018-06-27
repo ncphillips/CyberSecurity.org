@@ -18,7 +18,7 @@ sitemap: false
     {% capture permalink %}/{{ page.slug }}/{% endcapture %}
   {% endif %}
   <h6>{{ page.title }} <br /><small>{{ permalink }}</small></h6>
-  <a class="btn" target="_blank" href="{{ site.url }}{{ permalink }}">New</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-critical" target="_blank" href="http://www.teachingdegree.org{{ permalink }}">Old/Live</a>
+  <a class="btn" target="_blank" href="{{ site.url }}{{ permalink }}">New</a>
   <br />
 {% endfor %}
 
@@ -37,6 +37,6 @@ sitemap: false
     {% capture permalink %}/{{ page.slug }}{% endcapture %}
   {% endif %}
   <h6>{{ page.title }} <br /><small>{{ permalink }}</small></h6>
-  <a class="btn" target="_blank" href="{{ site.url }}{{ permalink }}">New</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-critical" target="_blank" href="http://www.teachingdegree.org{{ permalink }}">Old/Live</a>
+  <a class="btn" target="_blank" href="{{ site.url }}{{ permalink }}">New</a>
   <br />
 {% endfor %}
