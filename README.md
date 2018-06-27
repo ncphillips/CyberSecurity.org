@@ -1,25 +1,9 @@
-# [[DOMAIN]]([PROTOCOL][URL])
+# [CyberSecurity.org](https://www.cybersecurity.org)
 
 > Powered by [Netlify](https://www.netlify.com/) & [Jekyll](https://jekyllrb.com/)
 
 
 ## Initial Setup
-
-***
-
-### Search & Replace
-
-Be sure to exclude the trailing slash('/') from the urls when replacing. Remove this `Search & Replace` section when completed.
-
-```
-[DOMAIN] = e.g. BusinessAnalytics.com
-[URL] = e.g. www.businessanalytics.com
-[BRANDEDURL] = e.g. forms.businessanalytics.com
-[PROTOCOL] = e.g. https://
-[REPOURL] = e.g. https://github.com/HigherEducation/BusinessAnalytics.com
-```
-
-***
 
 ### Install Dependencies
 

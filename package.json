@@ -1,18 +1,18 @@
 {
-  "name": "[DOMAIN]",
+  "name": "CyberSecurity.org",
   "version": "1.0.0",
-  "description": "[DOMAIN]([PROTOCOL][URL]) ========================================",
-  "site": "[PROTOCOL][URL]",
+  "description": "CyberSecurity.org(https://www.cybersecurity.org) ========================================",
+  "site": "https://www.cybersecurity.org",
   "repository": {
     "type": "git",
-    "url": "[REPOURL].git"
+    "url": "https://github.com/HigherEducation/CyberSecurity.org.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "[REPOURL]/issues"
+    "url": "https://github.com/HigherEducation/CyberSecurity.org/issues"
   },
-  "homepage": "[REPOURL]",
+  "homepage": "https://github.com/HigherEducation/CyberSecurity.org",
   "babel": {
     "presets": [
       [

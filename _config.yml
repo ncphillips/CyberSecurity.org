@@ -1,10 +1,10 @@
 # Settings
-title:               [DOMAIN]
+title:               CyberSecurity.org
 description:
-url:                 [PROTOCOL][URL]
+url:                 https://www.cybersecurity.org
 baseurl:
-brandedurl:          [PROTOCOL][BRANDEDURL]
-email:               contact+[DOMAIN]@highereducation.com
+brandedurl:          https://forms.cybersecurity.org
+email:               contact+CyberSecurity.org@highereducation.com
 markdown:            kramdown
 layouts_dir:         html/layouts
 includes_dir:        html/includes
@@ -12,7 +12,7 @@ plugins_dir:         plugins
 collections_dir:     # implement on Forestry.io changelog update: _collections
 image_base:          assets/media
 permalink:           :path/
-publisher:           [DOMAIN]
+publisher:           CyberSecurity.org
 logo:
 
 
