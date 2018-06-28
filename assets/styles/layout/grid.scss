@@ -80,6 +80,11 @@ body {
 }
 
 .entry-content {
+  > div:first-child,
+  > :first-child {
+    margin-top: 0;
+  }
+
   > ul:last-child,
   > :last-child {
     margin-bottom: 60px;
