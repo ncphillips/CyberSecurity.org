@@ -258,6 +258,7 @@ body {
     order: 4;
 
     @media (min-width: $desk-start) {
+      margin-top: 0;
       width: $sidebar-width;
     }
   }
