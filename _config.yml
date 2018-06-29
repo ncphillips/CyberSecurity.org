@@ -4,7 +4,7 @@ description:
 url:                 https://www.cybersecurity.org
 baseurl:
 brandedurl:          https://forms.cybersecurity.org
-email:               contact+CyberSecurity.org@highereducation.com
+email:               contact+cybersecurityorg@highereducation.com
 markdown:            kramdown
 layouts_dir:         html/layouts
 includes_dir:        html/includes
