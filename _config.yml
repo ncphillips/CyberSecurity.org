@@ -34,6 +34,20 @@ defaults:
       featured_image:
       layout:         "default"
   - scope:
+      path:           "_pages/index.html"
+    values:
+      permalink:      :path
+  - scope:
+      path:           "_pages/404.html"
+    values:
+      permalink:      :path
+      sitemap:        false
+  - scope:
+      path:           "_pages/410.html"
+    values:
+      permalink:      :path
+      sitemap:        false
+  - scope:
       path:           "admin/**"
     values:
       sitemap:        false

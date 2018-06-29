@@ -2,10 +2,12 @@
 new_page_extension: html
 auto_deploy: false
 admin_path: "/admin"
-webhook_url: 
-collections: 
+webhook_url:
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
-use_front_matter_path: 
+use_front_matter_path:
 file_template: ":filename:"
+collections:
+- path: ''
+  default_front_matter_template: default
