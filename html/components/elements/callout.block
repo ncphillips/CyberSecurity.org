@@ -10,19 +10,19 @@ Properties: <ul><li>content <i>required.</i></li><li>background <i>required.</i>
 
 <blockquote class="callout" style="background-image: url('{{ background }}')">
 
-  <p>{{ content }}</p>
+  <p>
+    {{ content }}
 
-  {% if source %}
-    <footer>
-      <cite>
-        {% if url %}
-          <a href="{{ url }}" target="_blank">{{ source }}</a>
-        {% else %}
-          {{ source }}
-        {% endif %}
-      </cite>
-    </footer>
-  {% endif %}
+    {% if source %}
+        <cite>
+          {% if url %}
+            <a href="{{ url }}" target="_blank">{{ source }}</a>
+          {% else %}
+            {{ source }}
+          {% endif %}
+        </cite>
+    {% endif %}
+  </p>
 
 </blockquote>
 
