@@ -3,6 +3,15 @@
 > Powered by [Netlify](https://www.netlify.com/) & [Jekyll](https://jekyllrb.com/)
 
 
+## References
+
+- Netlify: https://app.netlify.com/sites/cybersecurityorg/overview
+- Forestry: https://app.forestry.io/sites/nwiuifgjcp5h9w/#/settings
+- Styleguide: https://www.cybersecurity.org/styleguide
+- Starter: https://github.com/HigherEducation/JAMstack
+- Cloudinary: https://cloudinary.com/console/media_library/folders/all/CyberSecurity.org
+
+
 ## Initial Setup
 
 ### Install Dependencies
