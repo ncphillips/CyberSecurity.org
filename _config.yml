@@ -11,7 +11,6 @@ includes_dir:        html/includes
 plugins_dir:         plugins
 collections_dir:     # implement on Forestry.io changelog update: _collections
 image_base:          assets/media
-permalink:           :path/
 publisher:           businessanalytics.com # CyberSecurity.org needs to be added to Platform Publishers
 logo:                /assets/img/logo.png
 
@@ -20,6 +19,9 @@ logo:                /assets/img/logo.png
 collections:
   pages:
     permalink:        :path/
+    output:           true
+  utilities:
+    permalink:        :path
     output:           true
   examples:
     output:           true
@@ -37,16 +39,6 @@ defaults:
       path:           "_pages/index.html"
     values:
       permalink:      :path
-  - scope:
-      path:           "_pages/404.html"
-    values:
-      permalink:      :path
-      sitemap:        false
-  - scope:
-      path:           "_pages/410.html"
-    values:
-      permalink:      :path
-      sitemap:        false
   - scope:
       path:           "admin/**"
     values:

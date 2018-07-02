@@ -27,7 +27,7 @@ fields:
   default: default
 - type: text
   name: seo_title
-  label: SEO TITLE
+  label: SEO Title
   description: Replaces <title></title> with a more descriptive title.
 - type: textarea
   name: description
@@ -69,12 +69,12 @@ fields:
 - type: boolean
   name: sitemap
   label: Sitemap
-  description: Include from sitemap?
+  description: Include on sitemap?
   default: true
 - type: boolean
   name: show_widget
   label: Show Widget
-  description: Widget for "sidebar" layout.
+  description: "*Sidebar Layout Only"
 - type: text
   name: head_css
   label: Head CSS
