@@ -41,7 +41,7 @@ defaults:
     values:
       permalink:      :path
   - scope:
-      path:           "admin/**"
+      type:           "utilities"
     values:
       sitemap:        false
 
