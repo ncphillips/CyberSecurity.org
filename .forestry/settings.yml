@@ -2,12 +2,13 @@
 new_page_extension: html
 auto_deploy: false
 admin_path: "/admin"
-webhook_url:
+webhook_url: 
 collections:
 - path: ''
   label: Pages
   create: none
   hidden: true
+  default_front_matter_template: default
 - path: _utilities
   label: Developer Only
   create: none
@@ -33,5 +34,5 @@ collections:
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
-use_front_matter_path:
+use_front_matter_path: 
 file_template: ":filename:"
