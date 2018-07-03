@@ -1,25 +1,18 @@
-# [[DOMAIN]]([PROTOCOL][URL])
+# [CyberSecurity.org](https://www.cybersecurity.org)
 
 > Powered by [Netlify](https://www.netlify.com/) & [Jekyll](https://jekyllrb.com/)
 
 
+## References
+
+- Netlify: https://app.netlify.com/sites/cybersecurityorg/overview
+- Forestry: https://app.forestry.io/sites/nwiuifgjcp5h9w/#/settings
+- Styleguide: https://www.cybersecurity.org/styleguide
+- Starter: https://github.com/HigherEducation/JAMstack
+- Cloudinary: https://cloudinary.com/console/media_library/folders/all/CyberSecurity.org
+
+
 ## Initial Setup
-
-***
-
-### Search & Replace
-
-Be sure to exclude the trailing slash('/') from the urls when replacing. Remove this `Search & Replace` section when completed.
-
-```
-[DOMAIN] = e.g. BusinessAnalytics.com
-[URL] = e.g. www.businessanalytics.com
-[BRANDEDURL] = e.g. forms.businessanalytics.com
-[PROTOCOL] = e.g. https://
-[REPOURL] = e.g. https://github.com/HigherEducation/BusinessAnalytics.com
-```
-
-***
 
 ### Install Dependencies
 

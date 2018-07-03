@@ -82,7 +82,7 @@
   height: $header-height-mobile;
 
   .menu {
-    background-color: $color-red;
+    background-color: $color-teal-dark;
     bottom: 0;
     color: $color-white;
     display: block;
@@ -98,7 +98,7 @@
     z-index: 0;
 
     > li {
-      border-bottom: 1px solid $color-red-dark;
+      border-bottom: 1px solid $color-teal;
       display: block;
       margin-left: 0;
       position: relative;
@@ -221,12 +221,12 @@
             border-bottom-right-radius: 0;
 
              > a::after {
-              border-color: $color-red;
+              border-color: $color-blue;
             }
           }
 
            > a {
-            color: $color-red;
+            color: $color-blue;
           }
 
           .sub-menu {
@@ -258,7 +258,7 @@
         box-shadow: none;
 
          > a {
-          color: $color-red;
+          color: $color-blue;
         }
       }
 
@@ -291,14 +291,14 @@
   width: 100%;
 
   li {
-    border-top: 1px solid $color-red;
+    border-top: 1px solid $color-teal-dark;
     display: block;
     margin: 0;
     text-align: left;
   }
 
   a {
-    background-color: $color-red-dark;
+    background-color: $color-teal;
     display: block;
     text-transform: none;
   }
@@ -339,7 +339,7 @@
       text-align: center;
 
       &:hover {
-        color: $color-red;
+        color: $color-blue;
       }
     }
   }

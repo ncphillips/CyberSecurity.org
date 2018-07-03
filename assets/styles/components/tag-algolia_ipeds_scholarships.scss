@@ -71,8 +71,8 @@
     }
 
     .title {
-      background-color: $color-gray-light;
-      color: $action-color;
+      background-color: $color-teal-light;
+      color: $color-blue;
 
       &:hover {
         background-color: $color-white;
@@ -91,7 +91,7 @@
     }
 
     .amount {
-      color: $color-green;
+      color: $color-yellow;
       display: block;
       font-size: 20px;
       margin: $small-spacing 0 0;

@@ -39,34 +39,32 @@ $sidebar-width:        300px;
  * eg $color-blue instead of $color-primary.
  * These are just a few examples to get you going. Change as needed
  */
-$color-anchor:          #314652;
-$color-anchor-dark:     #1A252B;
-$color-black:           #000000;
-$color-blue:            #0062B3;
-$color-blue-dark:       #004D8C;
-$color-blue-light:      #007EE6;
-$color-gray:            #FAFAFA;
-$color-gray-dark:       #DEE2E7;
-$color-gray-light:      #F5F7F7;
-$color-green:           #639B7F;
-$color-green-dark:      #4B7560;
-$color-navy:            #082839;
-$color-navy-dark:       #020C12;
-$color-red:             #9F3C3C;
-$color-red-dark:        #782E2E;
-$color-red-light:       #D14F4F;
-$color-teal:            #2AB6C0;
-$color-teal-dark:       #229199;
-$color-white:           #FFFFFF;
+$color-black:         #000000;
+$color-blue:          #3DCCC6;
+$color-blue-dark:     #30B0AA;
+$color-gray:          #465359;
+$color-gray-dark:     #2D3540;
+$color-gray-light:    #DEE2E7;
+$color-navy:          #003652;
+$color-navy-dark:     #001F30;
+$color-orange:        #FF8C00;
+$color-orange-dark:   #E47D00;
+$color-tan:           #F9F9F9;
+$color-teal:          #187280;
+$color-teal-dark:     #10525C;
+$color-teal-light:    #F5FCFD;
+$color-white:         #FFFFFF;
+$color-yellow:        #FFCA00;
+$color-yellow-dark:   #F5BD20;
 
 // Font Colors
-$base-background-color: $color-gray;
-$base-font-color:       $color-anchor;
+$base-background-color: $color-white;
+$base-font-color:       $color-gray;
 $action-color:          $color-blue;
-$action-focus-color:    $color-blue-light;
+$action-focus-color:    $color-blue-dark;
 
 // Border
-$base-border-color:     $color-gray-dark;
+$base-border-color:     $color-gray-light;
 $base-border:           1px solid $base-border-color;
 $base-box-shadow:       0 8px 15px 4px rgba($color-black, .09);
 

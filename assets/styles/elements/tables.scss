@@ -38,7 +38,7 @@ caption {
 
 thead {
   th {
-    background-color: $color-gray-light;
+    background-color: $color-tan;
     border: $base-border;
   }
 
@@ -55,7 +55,7 @@ thead {
     display: none;
 
      + tbody th {
-      background-color: $color-gray-light;
+      background-color: $color-tan;
     }
   }
 }
@@ -79,14 +79,14 @@ th {
 }
 
 th {
-  background-color: $color-gray-light;
+  background-color: $color-tan;
   font-weight: 500;
   text-transform: uppercase;
 
   @media (max-width: $lap-start) {
     @include font-smooth;
 
-    background-color: $color-gray-light;
+    background-color: $color-tan;
     border: 0;
     border-bottom: $base-border;
     display: block;

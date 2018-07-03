@@ -20,7 +20,7 @@
 
   li {
     align-items: center;
-    background-color: $base-background-color;
+    background-color: transparent;
     border: $base-border;
     box-sizing: border-box;
     display: block;
@@ -72,8 +72,8 @@
 
   a {
     align-items: center;
-    background-color: $color-gray-light;
-    color: $color-navy;
+    background-color: $color-teal-light;
+    color: $color-gray;
     cursor: pointer;
     display: flex;
     font-size: 15px;

@@ -7,12 +7,18 @@
   position: relative;
 
   @media (min-width: $lap-start) {
-    body:not(.page-template-page-sidebar) & {
-      left: 50%;
-      margin: 65px -50vw;
-      padding: 65px 0;
-      right: 50%;
-      width: 100vw;
+    left: 50%;
+    margin: 65px -50vw;
+    padding: 65px 0;
+    right: 50%;
+    width: 100vw;
+
+    .sidebar-template & {
+      left: initial;
+      margin: 50px 0;
+      padding: 50px 0;
+      right: initial;
+      width: 100%;
     }
   }
 

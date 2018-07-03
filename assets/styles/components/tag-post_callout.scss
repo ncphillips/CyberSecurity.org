@@ -2,6 +2,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: $base-border-radius;
   display: block;
   height: 200px;
   margin: $base-spacing 0;
@@ -31,7 +32,7 @@
 
   &::after {
     @include font-smooth;
-    background-color: $color-teal;
+    background-color: $color-yellow;
     box-shadow: 0 5px 5px 0 rgba($color-black, .2);
     color: $color-white;
     content: attr(data-ribbon);

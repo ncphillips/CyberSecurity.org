@@ -24,7 +24,7 @@
 
   &::before,
   &::after {
-    color: $color-gray-dark;
+    color: $color-gray-light;
     content: '“';
     font-size: 90px;
     font-weight: 800;
@@ -74,12 +74,7 @@
     }
   }
 
-  a {
-    color: $color-blue;
-  }
-
   cite {
-    display: block;
     font-size: 16px;
     font-style: normal;
     margin: 5px 0 0;
@@ -87,7 +82,6 @@
     &::before {
       content: '~';
       display: inline-block;
-      margin-right: 3px;
     }
   }
 }

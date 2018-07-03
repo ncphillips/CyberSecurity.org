@@ -58,9 +58,9 @@
     @include font-smooth;
 
     align-items: center;
-    background-color: $color-teal;
-    border: 1px solid $color-teal-dark;
-    border-right: 4px solid $color-teal-dark;
+    background-color: $color-yellow;
+    border: 1px solid $color-yellow-dark;
+    border-right: 4px solid $color-yellow-dark;
     border-top: 0;
     color: $color-white;
     display: flex;
@@ -86,7 +86,7 @@
     @include font-smooth;
 
     align-items: center;
-    background-color: $color-gray-light;
+    background-color: $color-teal-light;
     border-bottom: $base-border;
     display: flex;
     left: 55px;
@@ -116,9 +116,9 @@
   // Score
   .score {
     align-items: center;
-    background: $color-teal;
-    border: 1px solid $color-teal-dark;
-    border-right: 4px solid $color-teal-dark;
+    background: $color-yellow;
+    border: 1px solid $color-yellow-dark;
+    border-right: 4px solid $color-yellow-dark;
     border-top: 0;
     color: $color-white;
     display: flex;
@@ -187,7 +187,7 @@
   }
 
   .toggle {
-    background-color: $color-gray-light;
+    background-color: $color-teal-light;
     border-bottom: $base-border;
     border-left: $base-border;
     border-right: $base-border;
@@ -294,7 +294,7 @@
     }
 
     .icon {
-      color: $color-gray-dark;
+      color: $color-gray-light;
       width: 32px;
 
       svg {
@@ -310,7 +310,7 @@
     }
 
     .label {
-      color: $color-navy;
+      color: $color-yellow-dark;
       display: block;
       font-size: 13px;
       margin-bottom: 5px;

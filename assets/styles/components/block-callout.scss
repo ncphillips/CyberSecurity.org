@@ -60,7 +60,6 @@
   }
 
   cite {
-    display: block;
     font-size: 14px;
     margin: 5px 0 0;
     position: relative;
@@ -69,7 +68,6 @@
     &::before {
       content: '~';
       display: inline-block;
-      margin-right: 3px;
     }
   }
 

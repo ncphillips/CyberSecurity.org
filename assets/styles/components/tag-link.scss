@@ -9,7 +9,7 @@
   @include font-smooth;
 
   align-items: left;
-  background-color: $color-teal;
+  background-color: $color-blue;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +45,7 @@
   }
 
   &::after {
-    background: $color-teal-dark url('/assets/img/icon-arrow-right.svg') no-repeat center / 8px auto;
+    background: $color-blue-dark url('/assets/img/icon-arrow-right.svg') no-repeat center / 8px auto;
     border-radius: 15px;
     content: '';
     display: block;
@@ -60,7 +60,7 @@
   &:hover,
   &:active,
   &:focus {
-    box-shadow: 0 0 0 2px $color-teal-dark, 0 0 15px rgba($color-black, .4);
+    box-shadow: 0 0 0 2px $color-blue-dark, 0 0 15px rgba($color-black, .4);
     color: $color-white;
   }
 

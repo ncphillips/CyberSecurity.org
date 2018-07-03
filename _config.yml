@@ -1,10 +1,10 @@
 # Settings
-title:               [DOMAIN]
+title:               CyberSecurity.org
 description:
-url:                 [PROTOCOL][URL]
+url:                 https://www.cybersecurity.org
 baseurl:
-brandedurl:          [PROTOCOL][BRANDEDURL]
-email:               contact+[DOMAIN]@highereducation.com
+brandedurl:          https://forms.cybersecurity.org
+email:               contact+cybersecurityorg@highereducation.com
 markdown:            kramdown
 layouts_dir:         html/layouts
 includes_dir:        html/includes
@@ -12,14 +12,17 @@ plugins_dir:         plugins
 collections_dir:     # implement on Forestry.io changelog update: _collections
 image_base:          assets/media
 permalink:           :path/
-publisher:           [DOMAIN]
-logo:
+publisher:           businessanalytics.com # CyberSecurity.org needs to be added to Platform Publishers
+logo:                /assets/img/logo.png
 
 
 # Collections
 collections:
   pages:
     permalink:        :path/
+    output:           true
+  utilities:
+    permalink:        :path
     output:           true
   examples:
     output:           true
@@ -34,14 +37,18 @@ defaults:
       featured_image:
       layout:         "default"
   - scope:
-      path:           "admin/**"
+      path:           "_pages/index.html"
+    values:
+      permalink:      :path
+  - scope:
+      type:           "utilities"
     values:
       sitemap:        false
 
 
 # Widget
 widget:
-  ssr:               # e.g. https://platform.highereducation.com/widgets.html?widget=ssr-qdf&backgroundColor=%231c2128&cta=SEARCH%20SCHOOLS&ctaColor=%2308f&height=325&title=DEGREE%20FINDER&titleColor=%232D3540
+  ssr:               https://platform.highereducation.com/widgets.html?widget=ssr-qdf&backgroundColor=%23003652&cta=SEARCH%20SCHOOLS&ctaColor=%23FFCA00&height=325&title=FIND%20A%20DEGREE&titleColor=%23001F30
 
 
 # Webmaster
@@ -56,8 +63,8 @@ webmaster:
 algolia:
   api_id:            QT4LTISCL1
   api_key:           9169c7a55535b7c9c9660f115b9d7db1
-  rankings:          # e.g. bacom_rankings
-  rankings_items:    # e.g. bacom_rankings_items
+  rankings:          bacom_rankings # used as example, will remove on deployment
+  rankings_items:    bacom_rankings_items # used as example, will remove on deployment
   scholarships:      he_scholarships_v2.0
   ipeds:             he_ipeds
 

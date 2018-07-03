@@ -2,7 +2,7 @@
 .filters {
   @include font-smooth;
 
-  background-color: $color-anchor;
+  background-color: $color-navy;
   margin: 0 (-$body-gutter);
   padding: 0 0 1px;
   position: relative;
@@ -16,7 +16,7 @@
 
 // Filter Section Titles
 .filter-title {
-  background-color: $color-navy;
+  background-color: $color-navy-dark;
   color: $color-white;
   font-size: 11px;
   font-weight: 800;
@@ -38,8 +38,8 @@
   position: relative;
 
   input {
-    background: $color-navy url('/assets/img/icon-magnify.svg') no-repeat 15px center / auto 17px;
-    border: 2px solid $color-navy;
+    background: $color-navy-dark url('/assets/img/icon-magnify.svg') no-repeat 15px center / auto 17px;
+    border: 2px solid $color-navy-dark;
     box-shadow: inset 0 2px 2px 0 rgba($color-black, .5);
     color: $color-white;
     font-size: 14px;
@@ -200,7 +200,7 @@
     padding-left: 28px;
 
     &::before {
-      background-color: $color-navy;
+      background-color: $color-navy-dark;
       border-radius: 1px;
       box-shadow: inset 0 1px 3px 0 rgba($color-black, .5);
       content: '';
@@ -214,7 +214,7 @@
     }
 
     &::after {
-      background: $color-blue url('/assets/img/icon-checkmark-white.svg') no-repeat center center / 11px auto;
+      background: $color-yellow url('/assets/img/icon-checkmark-white.svg') no-repeat center center / 11px auto;
       border-radius: 1px;
       content: '';
       display: none;
@@ -230,7 +230,7 @@
 
 // Item Count
 .filter-count {
-  background-color: $color-navy;
+  background-color: $color-navy-dark;
   border-radius: 1px;
   box-shadow: inset 0 1px 3px 0 rgba($color-black, .5);
   color: rgba($color-white, .4);
@@ -264,7 +264,7 @@
   }
 
   .ais-header {
-    color: rgba($color-navy, .4);
+    color: $color-gray;
     font-size: 12px;
     font-weight: 800;
     margin-bottom: 5px;
@@ -279,8 +279,8 @@
   .ais-current-refined-values--link {
     @include font-smooth;
 
-    background-color: $color-blue;
-    border: $base-border;
+    background-color: $color-yellow;
+    border: 1px solid $color-yellow-dark;
     border-radius: $base-border-radius;
     color: $color-white;
     display: inline-block;
@@ -304,7 +304,7 @@
     }
 
     &:hover {
-      background: $color-blue-dark;
+      background: $color-yellow-dark;
     }
   }
 
@@ -331,7 +331,7 @@
   .ais-pagination {
     @include clearfix;
 
-    background-color: $color-teal;
+    background-color: $color-yellow;
     border-radius: $base-border-radius;
     display: block;
     font-weight: 800;
@@ -344,7 +344,7 @@
     }
 
     .ais-pagination--item {
-      border-right: 1px solid $color-teal-dark;
+      border-right: 1px solid $color-yellow-dark;
       display: block;
       float: left;
       width: 25%;
@@ -363,7 +363,7 @@
 
         .ais-pagination--link {
           color: currentColor;
-          opacity: .3;
+          opacity: .5;
         }
       }
 
@@ -373,7 +373,7 @@
 
       &.ais-pagination--item__active a {
         cursor: default;
-        opacity: .3;
+        opacity: .5;
       }
 
       a {

@@ -1,9 +1,36 @@
 ---
 new_page_extension: html
 auto_deploy: false
-admin_path: "/admin"
+admin_path: "/_utilities/admin"
 webhook_url: 
-collections: 
+collections:
+- path: ''
+  label: Pages
+  create: none
+  hidden: true
+  default_front_matter_template: default
+- path: _utilities
+  label: Developer Only
+  create: none
+  hidden: true
+- path: _pages
+  label: Pages
+  create: all
+  templates:
+  - default
+  default_front_matter_template: default
+- path: _posts
+  label: Posts
+  create: all
+  templates:
+  - default
+  default_front_matter_template: default
+- path: _examples
+  label: Examples
+  create: all
+  templates:
+  - default
+  default_front_matter_template: default
 upload_dir: ''
 public_path: ''
 front_matter_path: ''

@@ -6,7 +6,7 @@
 }
 
 .certification {
-  border: 15px solid $color-green;
+  border: 15px solid $color-yellow;
   border-image: url('/assets/img/border-certification.png') 30 round;
   font-size: 14px;
   margin: $base-spacing 0;
@@ -15,7 +15,7 @@
   width: 100%;
 
   &::before {
-    border: 1px solid $color-teal;
+    border: 1px solid $color-yellow;
     bottom: 0;
     content: '';
     height: calc(100% - 5px);
@@ -44,7 +44,7 @@
   }
 
   .icon {
-    color: $color-teal;
+    color: $color-yellow;
     display: block;
     height: 40px;
     margin: 0 auto $small-spacing;

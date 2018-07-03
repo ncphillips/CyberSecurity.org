@@ -19,7 +19,7 @@
   }
 
   .title {
-    background-color: $color-gray-light;
+    background-color: $color-teal-light;
     color: $action-color;
 
     &:hover {
@@ -39,7 +39,7 @@
   }
 
   .amount {
-    color: $color-red;
+    color: $color-yellow;
     display: block;
     font-size: 20px;
     margin: $small-spacing 0 0;
