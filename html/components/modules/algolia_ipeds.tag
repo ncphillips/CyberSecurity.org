@@ -1,8 +1,8 @@
 {% comment %}
 Title: Algolia: Ipeds
-Markup: {% this degee:"" %}
-Example: {% this degee:"" %}
-Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert_post_bach, cert_post_mast, other, or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Markup: {% this degree:"" cips:"" %}
+Example: {% this degree:"" cips:"" %}
+Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert_post_bach, cert_post_mast, other, or exclude property</i></li><li>cips <i>e.g. "42.0101", "42.0101, 42.2701, 42.2702, 42.2703, 42.2704", or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
 {% endcomment %}
 
 
@@ -82,7 +82,7 @@ Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert
 <script>
 
 // Algolia
-var cips = []; // e.g. ['42.0101', '42.2701', '42.2702', '42.2703', '42.2704']
+var cips = [{{ cips }}]; // e.g. ['42.0101', '42.2701', '42.2702', '42.2703', '42.2704']
 
 var disjunctiveFacetsRefinements = {
   'completions.classification_code': cips
@@ -107,7 +107,6 @@ var disjunctiveFacetsRefinements = {
     disjunctiveFacetsRefinements["degrees.{{ degree }}"] = ["Other Degree"];
 {% endcase %}
 
-var degree      = {%- if degee -%}"{{ degree }}"{%- else -%}false{%- endif -%};
 var hitsPerPage = 20;
 var algoliaIpeds = instantsearch({
   appId: '{{ site.algolia.api_id }}',
