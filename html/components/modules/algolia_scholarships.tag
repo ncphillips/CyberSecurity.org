@@ -1,8 +1,8 @@
 {% comment %}
 Title: Algolia: Scholarships
-Markup: {% this study_areas:"" title:"" %}
-Example: {% this study_areas:"" %}
-Properties: <ul><li>study_areas <i>general|Nursing|education|engineering|Music|business|Law|accounting|agriculture|journalism|medicine|Art|business administration|architecture|occupational therapy|Civil engineering|Biology|English|history|elementary education|science|mathematics|food science/technology|library science|theatre|Textile chemistry, textile management, textile science|dental hygiene|fine arts|Automotive marketing|Chemical engineering|computer science|culinary arts|document management, graphic communication|human sciences|mechanical engineering|Aviation|American history|chemistry|Electrical engineering|agribusiness, agriscience|engineering, math, science, technology|hospitality with focus on travel and tourism, tourism-specific area|political science|art history|healthcare|law enforcement|pharmacy|Horticulture|Physics|visual arts|automotive aftermarket management|industrial engineering|landscape architecture|ministry|nuclear engineering and nuclear science|travel/tourism|chiropractic|interior design|criminal justice|engineering, science|geology|health-related field|marketing|social work|teacher education|teaching|Psychology|dentistry|engineering, mathematics, science|fashion|performing arts|automotive|electrical engineering, mechanical engineering|environmental studies|graphic design|humanities|management|medical|special education|Computer science and aeronautical/aerospace, astronautical, architectural, automotive, civil, hemical, computer, electrical, environmental, industrial, mechanical, manufacturing, materials science, or petroleum engineering|French|agriculture-related field|arts and sciences|business management|communications|communications, journalism|finance|finance, hospitality, technology|marine-related field|math, science|Geology, geophysics|Graphic communications|arts|broadcasting, electronic media, television|construction|dance|economics|engineering, math, science|engineering, mathematics, science, technology|family and consumer sciences</i></li><li>title</li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Markup: {% this study_areas:"" title:"" state:"" %}
+Example: {% this study_areas:"general|Nursing" state:"SD" %}
+Properties: <ul><li>study_areas <i>general|Nursing|education|engineering|Music|business|Law|accounting|agriculture|journalism|medicine|Art|business administration|architecture|occupational therapy|Civil engineering|Biology|English|history|elementary education|science|mathematics|food science/technology|library science|theatre|Textile chemistry, textile management, textile science|dental hygiene|fine arts|Automotive marketing|Chemical engineering|computer science|culinary arts|document management, graphic communication|human sciences|mechanical engineering|Aviation|American history|chemistry|Electrical engineering|agribusiness, agriscience|engineering, math, science, technology|hospitality with focus on travel and tourism, tourism-specific area|political science|art history|healthcare|law enforcement|pharmacy|Horticulture|Physics|visual arts|automotive aftermarket management|industrial engineering|landscape architecture|ministry|nuclear engineering and nuclear science|travel/tourism|chiropractic|interior design|criminal justice|engineering, science|geology|health-related field|marketing|social work|teacher education|teaching|Psychology|dentistry|engineering, mathematics, science|fashion|performing arts|automotive|electrical engineering, mechanical engineering|environmental studies|graphic design|humanities|management|medical|special education|Computer science and aeronautical/aerospace, astronautical, architectural, automotive, civil, hemical, computer, electrical, environmental, industrial, mechanical, manufacturing, materials science, or petroleum engineering|French|agriculture-related field|arts and sciences|business management|communications|communications, journalism|finance|finance, hospitality, technology|marine-related field|math, science|Geology, geophysics|Graphic communications|arts|broadcasting, electronic media, television|construction|dance|economics|engineering, math, science|engineering, mathematics, science, technology|family and consumer sciences</i></li><li>title</li><li>state <i>e.g. "AL", "SD" or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 {% endcomment %}
 
 
@@ -96,18 +96,28 @@ Properties: <ul><li>study_areas <i>general|Nursing|education|engineering|Music|b
 
 <script>
 
-// Algolia
-var studyAreas      = {%- if study_areas -%}"{{ study_areas }}"{%- else -%}false{%- endif -%};
-var studyAreasFacet = studyAreas ? { study_areas: studyAreas.split('|') } : {};
-var hitsPerPage = 20;
+// Facet Refinements
+var disjunctiveFacetsRefinements = {};
+
+{% if state %}
+  disjunctiveFacetsRefinements["states"] = ["{{ state }}"];
+{% endif %}
+
+var studyAreas = {% if study_areas %}"{{ study_areas }}"{% else %}false{% endif %};
+{% if study_areas %}
+  disjunctiveFacetsRefinements["study_areas"] = studyAreas.split('|');
+{% endif %}
+
+
+// Algolia Init
 var algoliaScholarships = instantsearch({
   appId: '{{ site.algolia.api_id }}',
   apiKey: '{{ site.algolia.api_key }}',
-  indexName: '{{ site.algolia.scholarships }}',
+  indexName: '{{ index }}',
   urlSync: false,
   searchParameters: {
-    disjunctiveFacetsRefinements: studyAreasFacet,
-    attributesToRetrieve: [ 'name', 'contact', 'requirements', 'application_url', 'deadline', 'enrollment_levels', 'renewable', 'sponsor', 'study_areas' ]
+    disjunctiveFacetsRefinements: disjunctiveFacetsRefinements,
+    attributesToRetrieve: [ 'states', 'name', 'contact', 'requirements', 'application_url', 'deadline', 'enrollment_levels', 'renewable', 'sponsor', 'study_areas' ]
   }
 });
 
@@ -404,7 +414,7 @@ algoliaScholarships.addWidget(
     transformData: {
       item: transformScholarship
     },
-    hitsPerPage: hitsPerPage
+    hitsPerPage: 20
   })
 );
 
@@ -640,8 +650,7 @@ for (var grouping in facetGroupings) {
   }
 }
 
-
-// Algolia Init
+// Algolia Start
 algoliaScholarships.start()
 
 </script>

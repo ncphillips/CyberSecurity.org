@@ -1,8 +1,8 @@
 {% comment %}
 Title: Algolia: Ipeds
-Markup: {% this degree:"" cips:"" %}
-Example: {% this degree:"" cips:"" %}
-Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert_post_bach, cert_post_mast, other, or exclude property</i></li><li>cips <i>e.g. "42.0101", "42.0101, 42.2701, 42.2702, 42.2703, 42.2704", or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Markup: {% this degree:"" cips:"" state:"" %}
+Example: {% this degree:"deg_bach" cips:"" state:"SD" %}
+Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert_post_bach, cert_post_mast, other, or exclude property</i></li><li>cips <i>e.g. "42.0101", "42.0101, 42.2701, 42.2702, 42.2703, 42.2704", or exclude property</i></li><li>state <i>e.g. "AL", "SD" or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
 {% endcomment %}
 
 
@@ -81,12 +81,17 @@ Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert
 
 <script>
 
-// Algolia
-var cips = [{{ cips }}]; // e.g. ['42.0101', '42.2701', '42.2702', '42.2703', '42.2704']
+// Facet Refinements
+var disjunctiveFacetsRefinements = {};
 
-var disjunctiveFacetsRefinements = {
-  'completions.classification_code': cips
-};
+var cips = [{{ cips }}]; // e.g. ['42.0101', '42.2701', '42.2702', '42.2703', '42.2704']
+{% if cips %}
+  disjunctiveFacetsRefinements["completions.classification_code"] = cips
+{% endif %}
+
+{% if state %}
+  disjunctiveFacetsRefinements["address.state"] = ["{{ state }}"];
+{% endif %}
 
 {% case degree %}
   {% when 'cert' %}
@@ -107,11 +112,12 @@ var disjunctiveFacetsRefinements = {
     disjunctiveFacetsRefinements["degrees.{{ degree }}"] = ["Other Degree"];
 {% endcase %}
 
-var hitsPerPage = 20;
+
+// Algoila Init
 var algoliaIpeds = instantsearch({
   appId: '{{ site.algolia.api_id }}',
   apiKey: '{{ site.algolia.api_key }}',
-  indexName: '{{ site.algolia.ipeds }}',
+  indexName: '{{ index }}',
   urlSync: false,
   searchParameters: {
     disjunctiveFacetsRefinements: disjunctiveFacetsRefinements,
@@ -463,7 +469,7 @@ algoliaIpeds.addWidget(
     transformData: {
       item: transformIped
     },
-    hitsPerPage: hitsPerPage
+    hitsPerPage: 20
   })
 );
 
@@ -668,8 +674,7 @@ for (var grouping in facetGroupings) {
   }
 }
 
-
-// Algolia Init
+// Algolia Start
 algoliaIpeds.start()
 
 </script>
