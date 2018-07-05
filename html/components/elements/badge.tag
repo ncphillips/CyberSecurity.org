@@ -2,7 +2,7 @@
 Title: Badge
 Markup: {% this image:"" title:"" download:"" float:"" %}
 Example: {% this title:"Top 10 Bachelor Degrees Badge" download:"https://via.placeholder.com/200x200" image:"https://via.placeholder.com/300x250" %}
-Properties: <ul><li>image <i>required.</i></li><li>title</li><li>download</li><li>float <i>left, right or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Properties: <ul><li>image <i>required.</i></li><li>title</li><li>download</li><li>float <i>left, right or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 {% endcomment %}
 
 

@@ -3,7 +3,7 @@ Title: Card
 Markup: {% this title:"" image:"" url:"" button_label:"" type:""  float:"" %}Content{% endthis %}
 Example: {% this title:"<em>Master's In</em> Business Analytics" image:"https://via.placeholder.com/300x200" url:"#" button_label:"Learn More" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quae, nulla necessitatibus ab possimus doloribus rerum error quasi. Sequi, neque.{% endthis %}
 Example_1: {% this type:"expert" title:"Stephanie Jones <em>Software Designer</em>" image:"https://via.placeholder.com/300x300" url:"#" button_label:"View Interview" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quae, nulla necessitatibus ab possimus doloribus rerum error quasi. Sequi, neque.{% endthis %}
-Properties: <ul><li>content</li><li>title</li><li>image</li><li>url</li><li>button_label</li><li>type <i>expert or exclude property</i></li><li>float <i>left, right or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Properties: <ul><li>content</li><li>title</li><li>image</li><li>url</li><li>button_label</li><li>type <i>expert or exclude property</i></li><li>float <i>left, right or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 {% endcomment %}
 
 

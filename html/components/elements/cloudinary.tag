@@ -5,7 +5,7 @@ Example: {% this path:"/v1511377049/BusinessAnalytics.com/Homepage/img-masters-i
 Example_1: {% this path:"/v1511377049/BusinessAnalytics.com/Homepage/img-masters-in-BA.jpg" height:"500" width:"500" %}<div class="clearfix"></div>
 Example_2: {% this path:"/v1511377049/BusinessAnalytics.com/Homepage/img-masters-in-BA.jpg" breakpoints:"600=/v1507744268/BusinessAnalytics.com/Degrees/img-pull-quote-temp.jpg|900=/v1507744268/BusinessAnalytics.com/Degrees/img-rankings-temp.jpg" %}<div class="clearfix"></div>
 Example_3: {% this path:"/v1511377049/BusinessAnalytics.com/Homepage/img-masters-in-BA.jpg" overlay_color:"1D1D5C" overlay_opacity:"70"  %}<div class="clearfix"></div>
-Properties: <ul><li>path <i>required.</i></li><li>breakpoints <i>e.g. picture tag: 600=IMAGE_PATH|900=IMAGE_PATH or srcset tag: 600|900|1200</i></li><li>quality</li><li>format</li><li>flag</li><li>width</li><li>height</li><li>width</li><li>crop</li><li>radius</li><li>opacity</li><li>overlay_color</li><li>overlay_opacity</li><li>gradient</li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Properties: <ul><li>path <i>required.</i></li><li>breakpoints <i>e.g. picture tag: 600=IMAGE_PATH|900=IMAGE_PATH or srcset tag: 600|900|1200</i></li><li>quality</li><li>format</li><li>flag</li><li>width</li><li>height</li><li>width</li><li>crop</li><li>radius</li><li>opacity</li><li>overlay_color</li><li>overlay_opacity</li><li>gradient</li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 Instructions: Contact developer for more information on Cloudinary Properties.
 {% endcomment %}
 

@@ -4,7 +4,7 @@ Markup: {% this url:"" title:"" subtitle:"" image:"" %}
 Example: {% this title:"Scholarships for Minority Students" image:"" url:"#" %}
 Example_1: {% this title:"Scholarships for Minority Students" subtitle:"Scholarships" url:"#" %}
 Example_2: {% this title:"Scholarships for Minority Students" subtitle:"Scholarships" image:"https://via.placeholder.com/100x100" url:"#" %}
-Properties: <ul><li>url <i>required.</i></li><li>title <i>required.</i></li><li>subtitle</li><li>image</li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Properties: <ul><li>url <i>required.</i></li><li>title <i>required.</i></li><li>subtitle</li><li>image</li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 {% endcomment %}
 
 

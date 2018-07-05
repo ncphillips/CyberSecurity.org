@@ -2,7 +2,7 @@
 Title: Algolia: Ipeds
 Markup: {% this degree:"" cips:"" state:"" %}
 Example: {% this degree:"deg_bach" cips:"" state:"SD" %}
-Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert_post_bach, cert_post_mast, other, or exclude property</i></li><li>cips <i>e.g. "42.0101", "42.0101, 42.2701, 42.2702, 42.2703, 42.2704", or exclude property</i></li><li>state <i>e.g. "AL", "SD" or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Properties: <ul><li>degree <i>cert, deg_assc, deg_bach, deg_mast, deg_doct, cert_post_bach, cert_post_mast, other, or exclude property</i></li><li>cips <i>e.g. "42.0101", "42.0101, 42.2701, 42.2702, 42.2703, 42.2704", or exclude property</i></li><li>state <i>e.g. "AL", "SD" or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 {% endcomment %}
 
 

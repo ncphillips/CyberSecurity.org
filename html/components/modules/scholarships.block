@@ -2,7 +2,7 @@
 Title: Scholarships Collection
 Markup: {% this title:"" expand_all:"" %}{% scholarship title:"" amount:"" %}Content{% endscholarship %}{% scholarship title:"" amount:"" %}Content{% endscholarship %}{% endthis %}
 Example: {% this title:"Scholarships Title" %}{% scholarship active:true title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, repellat!" amount:"$4,000" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis officiis est porro maxime obcaecati aspernatur explicabo, quo magni libero laboriosam aut sed a vitae dolorem quasi amet quaerat. Eligendi laudantium, magni molestias cupiditate.{% endscholarship %}{% scholarship title:"Lorem ipsum dolor." amount:"$3,000" %}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis officiis est porro maxime obcaecati aspernatur explicabo, quo magni libero laboriosam aut sed a vitae dolorem quasi amet quaerat. Eligendi cupiditate.{% endscholarship %}{% scholarship title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure itaque sequi inventore fuga." amount:"$6,000" %}copy-60{% endscholarship %}{% endthis %}
-Properties: <ul><li>content <i>required.</i></li><li>title</li><li>expand_all <i>true or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></ul>
+Properties: <ul><li>content <i>required.</i></li><li>title</li><li>expand_all <i>true or exclude property</i></li><li><small><i>Exclude blank properties from Tag/Block</i></small></li></ul>
 {% endcomment %}
 
 
