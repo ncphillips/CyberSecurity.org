@@ -25,25 +25,28 @@ module Jekyll
           if markup =~ Syntax
 
             markup.scan(/\{% subnav_item(.*?)\{% endsubnav_item %\}/m).each do |value|
+
               tag     = '{% subnav_item' + value.first + '{% endsubnav_item %}'
               tag     = tag.gsub("\r", ' ').gsub("\n", ' ').squeeze(' ')
-              hashtag = !tag[/hashtag\:(.*?)\s/, 1].nil? ? tag[/hashtag\:(.*?)\s/, 1].gsub(/^'|"/, '').gsub(/'|"$/, '').to_s : nil
-              title   = !tag[/title\:(.*?)\s/, 1].nil? ? tag[/title\:(.*?)\s/, 1].gsub(/^'|"/, '').gsub(/'|"$/, '').to_s : nil
+              hashtag = !tag[/hashtag\:(.*?)\s/, 1].nil? ? tag[/hashtag\:(.*?)\s/, 1].gsub(/^'|"/, '').gsub(/'|"$/, '').to_s.strip : nil
+              title   = !tag[/title\:(\'|\")(.*?)(\'|\")\s/, 2].nil? ? tag[/title\:(\'|\")(.*?)(\'|\")\s/, 2].gsub(/^'|"/, '').gsub(/'|"$/, '').to_s.strip : nil
               content = !tag[/%\}(.*?)\{%/, 1].nil? ? tag[/%\}(.*?)\{%/, 1].to_s : nil
 
               if title.nil? and !content.nil?
                 content = Nokogiri::HTML.parse content;
-                title   = content.text;
+                title   = content.text.strip;
               end
 
-              if hashtag.nil? and !title.nil?
-                hashtag = content.text.gsub(/[^0-9a-z ]/i, '').to_s.strip.downcase.gsub ' ', '-'
+              if hashtag.nil? || hashtag.empty?
+                hashtag = title.gsub(/[^0-9a-z ]/i, '').downcase.gsub ' ', '-'
               end
 
-              navItems[hashtag] = title.strip
+              navItems[hashtag] = title
+
             end
 
             if !navItems.empty?
+
               if !page.data["title"].nil? and !page.data["title"].empty?
                 introHash = page.data["title"].gsub(/[^0-9a-z ]/i, '').to_s.strip.downcase.gsub ' ', '-'
                 introItem[introHash] = page.data["title"].strip
@@ -51,6 +54,7 @@ module Jekyll
               end
 
               page.data["subnav"] = navItems
+
             end
 
           end
