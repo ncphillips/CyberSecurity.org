@@ -32,12 +32,12 @@ module Jekyll
               title   = !tag[/title\:(\'|\")(.*?)(\'|\")\s/, 2].nil? ? tag[/title\:(\'|\")(.*?)(\'|\")\s/, 2].gsub(/^'|"/, '').gsub(/'|"$/, '').to_s.strip : nil
               content = !tag[/%\}(.*?)\{%/, 1].nil? ? tag[/%\}(.*?)\{%/, 1].to_s : nil
 
-              if title.nil? and !content.nil?
+              if (title.nil? or title.empty?) and !content.nil?
                 content = Nokogiri::HTML.parse content;
                 title   = content.text.strip;
               end
 
-              if hashtag.nil? || hashtag.empty?
+              if hashtag.nil? or hashtag.empty?
                 hashtag = title.gsub(/[^0-9a-z ]/i, '').downcase.gsub ' ', '-'
               end
 
