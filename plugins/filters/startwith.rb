@@ -6,7 +6,8 @@ module StartWith
 
   def startwith(content, startwidth_content = "")
 
-    # Return Empty
+    content = content.to_s
+
     if (content.nil? or content.empty?) and (startwidth_content.nil? or startwidth_content.empty?)
       return
     end

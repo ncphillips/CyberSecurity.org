@@ -6,6 +6,9 @@ module Find
 
   def find(haystack, needle)
 
+    haystack = haystack.to_s
+    needle   = needle.to_s
+
     if (haystack.nil? or haystack.empty?) or (needle.nil? or needle.empty?)
       return
     end

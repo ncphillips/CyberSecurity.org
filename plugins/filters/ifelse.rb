@@ -6,8 +6,9 @@ module IfElse
 
   def iflese(content, if_content = "", else_content = "")
 
-    # Return Empty
-    if (content.nil? or content.empty?) and (if_content.nil? or if_content.empty?) and (else_content.nil? or else_content.empty?)
+    content = content.to_s
+
+    if if_content.empty? and else_content.empty?
       return
     end
 

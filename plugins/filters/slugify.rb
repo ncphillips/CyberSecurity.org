@@ -8,6 +8,8 @@ module Slugify
 
   def slugify(input)
 
+    input = input.to_s
+
     if (input.nil? or input.empty?)
       return
     end

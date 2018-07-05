@@ -6,6 +6,8 @@ module Ternary
 
   def ternary(content, ternary_content = "")
 
+    content = content.to_s
+
     if (content.nil? or content.empty?) and (ternary_content.nil? or ternary_content.empty?)
       return
     end

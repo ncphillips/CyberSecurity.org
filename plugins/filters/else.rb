@@ -6,11 +6,13 @@ module Else
 
   def else(content, else_content = "")
 
-    if (content.nil? or content.empty?) and (else_content.nil? or else_content.empty?)
+    content = content.to_s
+
+    if else_content.empty?
       return
     end
 
-    return (!content.nil? and !content.empty?) ? '' : else_content
+    return (content.nil? or content.empty?) ? else_content : ''
 
   end
 

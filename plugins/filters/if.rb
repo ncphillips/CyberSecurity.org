@@ -6,8 +6,9 @@ module If
 
   def if(content, if_content = "")
 
-    # Return Empty
-    if (content.nil? or content.empty?) and (if_content.nil? or if_content.empty?)
+    content = content.to_s
+
+    if if_content.empty?
       return
     end
 

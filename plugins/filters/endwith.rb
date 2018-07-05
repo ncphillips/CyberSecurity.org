@@ -6,6 +6,8 @@ module EndWith
 
   def endwith(content, endwith_content = "")
 
+    content = content.to_s
+
     # Return Empty
     if (content.nil? or content.empty?) and (endwith_content.nil? or endwith_content.empty?)
       return

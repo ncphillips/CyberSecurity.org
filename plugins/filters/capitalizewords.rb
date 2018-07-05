@@ -4,7 +4,9 @@
 module CapitalizeWords
 
   def capitalizewords(words)
-    words.split(' ').map(&:capitalize).join(' ')
+
+    words.to_s.split(' ').map(&:capitalize).join(' ')
+
   end
 
 end

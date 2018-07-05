@@ -12,6 +12,8 @@ module Dollar
 
   def dollar(input)
 
+    input = input.to_s
+
     if (input.nil? or input.empty?)
       return
     end
