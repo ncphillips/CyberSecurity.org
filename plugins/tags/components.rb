@@ -51,6 +51,7 @@ module Jekyll
   #
   class TagHelpers
 
+
     # Get Static/Dynamic Properties
     def getProperties(context, tag, markup, content = "")
 
@@ -69,8 +70,8 @@ module Jekyll
 
       if !tag_all.empty?
         tag_all.each do |key, value|
-          value = value.to_s.gsub(/^'|"/, '').gsub(/'|"$/, '').strip
-          if !value.empty?
+          value = parseValue(value)
+          if !value.nil?
             variables[key] = value
           end
         end
@@ -79,23 +80,67 @@ module Jekyll
       # Variables from Context
       properties = markup.gsub(/\:\"(.*?)\"\s+/, " ").gsub(/\:\'(.*?)\'\s+/, " ").gsub(/\:(.*?)\s+/, " ").to_s
       properties.split(" ").each do |key|
-        value = context[key].to_s.gsub(/^'|"/, '').gsub(/'|"$/, '').strip
-        if !value.empty?
+        value = parseValue(value)
+        if !value.nil?
           variables[key] = value
         end
       end
 
       # Variables from Tag
       markup.scan(Liquid::TagAttributes) do |key, value|
-        value = value.to_s.gsub(/^'|"/, '').gsub(/'|"$/, '').strip
-        if !value.empty?
+        value = parseValue(value)
+        if !value.nil?
           variables[key] = value
         end
       end
 
       # Return Variables
       return variables
+
     end
+
+
+    # Parse Variable Value
+    def parseValue(data)
+
+      # Remove surrounding quotes & spaces
+      value = data.to_s.gsub(/^'|"/, '').gsub(/'|"$/, '').strip
+
+      # If empty, make nil
+      if value.empty?
+        value = nil;
+      end
+
+      # Convert string true to boolean true
+      if value == "true" || value == "TRUE"
+        value = true
+      end
+
+      # Convert string false to boolean false
+      if value == "false" || value == "FALSE"
+        value = false
+      end
+
+      # Convert number to floating or integer
+      if is_number?(value)
+        if value.include?('.') || value.include?(',')
+          value = value.to_f
+        else
+          value = value.to_i
+        end
+      end
+
+      # Return Value
+      return value
+
+    end
+
+
+    # Is Number Method
+    def is_number? string
+      true if Float(string) rescue false
+    end
+
 
   end
 
@@ -105,6 +150,7 @@ end
 # Loop Components Directory For Tags/Blocks
 Dir.glob('html/components/**/*') do |file|
   ext = File.extname(file)
+
   if ext === ".tag" || ext === ".block"
     Liquid::Template.register_tag(File.basename(file, ext), ext === ".tag" ? Jekyll::CustomTags : Jekyll::CustomBlocks)
   end
