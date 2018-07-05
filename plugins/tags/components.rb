@@ -80,7 +80,7 @@ module Jekyll
       # Variables from Context
       properties = markup.gsub(/\:\"(.*?)\"\s+/, " ").gsub(/\:\'(.*?)\'\s+/, " ").gsub(/\:(.*?)\s+/, " ").to_s
       properties.split(" ").each do |key|
-        value = parseValue(value)
+        value = parseValue(context[key])
         if !value.nil?
           variables[key] = value
         end
