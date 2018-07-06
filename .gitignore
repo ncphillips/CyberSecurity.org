@@ -34,12 +34,9 @@ nbproject
 bower_components
 node_modules
 /vendor
-/_html/includes/css/embed-*
 
 # Jekyll Folders to ignore
 _site
 _import
 _import_backup
 .jekyll-metadata
-# Generated file, don't edit above this line.
-# Put new additions below.
