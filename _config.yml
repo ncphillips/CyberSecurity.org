@@ -6,8 +6,8 @@ baseurl:
 brandedurl:          https://forms.cybersecurity.org
 email:               contact+cybersecurityorg@highereducation.com
 markdown:            kramdown
-layouts_dir:         html/layouts
-includes_dir:        html/includes
+layouts_dir:         _html/layouts
+includes_dir:        _html/includes
 plugins_dir:         plugins
 collections_dir:     # implement on Forestry.io changelog update: _collections
 image_base:          assets/media
