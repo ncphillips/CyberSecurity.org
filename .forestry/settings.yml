@@ -4,33 +4,21 @@ auto_deploy: false
 admin_path: "/_utilities/admin"
 webhook_url: 
 collections:
-- path: ''
-  label: Pages
-  create: none
-  hidden: true
-  default_front_matter_template: default
-- path: _utilities
-  label: Developer Only
-  create: none
-  hidden: true
 - path: _pages
   label: Pages
   create: all
-  templates:
-  - default
-  default_front_matter_template: default
-- path: _posts
-  label: Posts
+- path: _utilities
+  label: Utilities
   create: all
-  templates:
-  - default
-  default_front_matter_template: default
 - path: _examples
   label: Examples
   create: all
-  templates:
-  - default
-  default_front_matter_template: default
+- path: _posts
+  label: Posts
+  create: all
+- path: ''
+  label: Pages
+  create: all
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
