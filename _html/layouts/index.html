@@ -1,0 +1,24 @@
+{% include header.html %}
+
+<main role="main" class="site-content">
+
+  {% include navigation-sub.html %}
+  {% include breadcrumbs.html %}
+
+  <section class="entry wrapper">
+
+    <h1 class="entry-title">{{ page.title }}</h1>
+    <div class="entry-content">{{ content }}</div>
+
+    {% for page in site.[page.index] %}
+      <article>
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.description }}</p>
+      </article>
+    {% endfor %}
+
+  </section>
+
+</main>
+
+{% include footer.html %}
