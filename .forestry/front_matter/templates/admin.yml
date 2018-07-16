@@ -1,0 +1,25 @@
+---
+label: admin
+hide_body: false
+is_partial: false
+fields:
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: Staff Writers
+- name: featured_image
+  label: Featured image
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: default
+- name: sitemap
+  label: Sitemap
+  type: boolean
+  hidden: false
+  default: false
